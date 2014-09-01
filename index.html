@@ -1,22 +1,28 @@
 <html>
-	<head>
-		<title>SVG-encoder</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div class="wrapper">
-		  <h1>SVG-encoder</h1>
-		  <p>SVG можно использовать в CSS через data URI, но вставку незакодированного SVG поддерживают только браузеры на Webkit.</p>
-		  <p>Если закодировать SVG с помощью <code>escape()</code> - SVG начинает отображаться во всех современных браузерах : )</p>
-		  <p>Подробнее про использование SVG и разные способы вставки <br>можно почитать тут: <a href="http://css.yoksel.ru/svg-icons/">SVG-иконки</a></p>
-		  <h4>Вставьте код SVG:</h4>
-		  <textarea name="init" id="init"></textarea>
-		  <h4>Возьмите закодированный:</h4>
-		  <textarea name="result" id="result"></textarea>
-		 
-		  <h4>Пример использования в CSS:</h4>
-		  <code>background: url(data:image/svg+xml;utf8,<i>ВАШ КОД</i>);</code>
-		</div> 
-		<script src="script.js"></script>	
-	</body>
+    <head>
+        <title>SVG-encoder</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+          <h1>SVG-encoder</h1>
+          <p>SVG можно использовать в CSS через data URI, но вставку незакодированного SVG поддерживают только браузеры на Webkit.</p>
+          <p>Если закодировать SVG с помощью <code>escape()</code> - SVG начинает отображаться во всех современных браузерах : )</p>
+          <p>Подробнее про использование SVG и разные способы вставки <br>можно почитать тут: <a href="http://css.yoksel.ru/svg-icons/">SVG-иконки</a></p>
+          <h4>Вставьте код SVG:</h4>
+          <textarea name="init" id="init"></textarea>
+          <i>У тега SVG обязательно должен быть атрибут xmlns, вот такой: <b>xmlns="http://www.w3.org/2000/svg"</b></i>
+          <h4>Возьмите закодированный:</h4>
+          <textarea name="result" id="result"></textarea>
+
+          <h4>Пример использования в CSS:</h4>
+          <code>background: url(data:image/svg+xml,<i>ВАШ КОД</i>);</code>
+
+          <h4>Готовый код для использования в CSS:</h4>
+          <textarea name="result-css" id="result-css"></textarea>
+          <h4>Превью</h4>
+          <div id="demo"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
