@@ -21,7 +21,7 @@ H4 {
   }
 
 P {
-  margin: 1.5rem 0;
+  margin: 1.2rem 0;
   }
 
 .wrapper {
@@ -33,7 +33,7 @@ P {
 
 TEXTAREA {
   width: 100%;
-  height: 70px;
+  height: 150px;
   margin: 0 0 1em 0;
   border: 1px solid #CCC;
   border-radius: 10px;
@@ -53,9 +53,24 @@ CODE I {
   color: black;
   }
 
+.columns:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  .column {
+    width: 48%;
+    }
+    .column--left {
+      float: left;
+      }
+    .column--right {
+      float: right;
+      }
+
 #demo {
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-repeat: no-repeat;
   border: 1px dashed #CCC;
 }
