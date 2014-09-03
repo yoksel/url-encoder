@@ -53,6 +53,39 @@ CODE I {
   color: black;
   }
 
+DL , DD, DT{
+  margin: 0;
+  }
+  DL {
+    text-align: right;
+    }
+  DT {
+    border-bottom: 1px dashed;
+    display: inline-block;
+    line-height: 1;
+    color: steelblue;
+    cursor: pointer;
+    }
+    DT:after {
+      content: "";
+      display: inline-block;
+      border: 0 solid transparent;
+      border-width: 8px 4px 0;
+      border-top-color: currentColor;
+      border-bottom-color: currentColor;
+      margin-left: 5px;
+      }
+      .opened:after {
+        border-width: 0 4px 8px ;
+        }
+  DD {
+    text-align: left;
+    }
+
+.hidden {
+  display: none;
+  }
+
 .columns:after {
   content: "";
   display: table;
