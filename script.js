@@ -7,18 +7,19 @@ var resDemo = doc.querySelector("#demo");
 
 var expanders = doc.querySelectorAll(".expander");
 var expandedClass = "expanded";
+var symbols = /[\r\n"%#()<>?\[\\\]^`{|}]/g;
 
 // Textarea Actions
 //----------------------------------------
 
 initTar.onchange = function() {
-    resTar.value = escape(initTar.value);
+    resTar.value = encodeSVG(initTar.value);
 };
 
 initTar.onkeyup = function() {
-    var escaped = escape(initTar.value);
+    var escaped = encodeSVG(initTar.value);
     resTar.value = escaped;
-    var resultCss = 'background-image: url(data:image/svg+xml,' + escaped + ')';
+    var resultCss = 'background-image: url("data:image/svg+xml,' + escaped + '")';
     resCssTar.value = resultCss;
     resDemo.setAttribute("style", resultCss);
 };
@@ -35,6 +36,16 @@ for (var i = 0; i < expanders.length; i++) {
         expanded.classList.toggle("hidden");
         this.classList.toggle("opened");
     };
+}
+
+// Encoding
+//----------------------------------------
+
+function encodeSVG(data) {
+    // Use single quotes instead of double to avoid encoding.
+    if (data.indexOf("'") < 0)
+        data = data.replace(/"/g, "'");
+    return data.replace(symbols, escape);
 }
 
 // Common
