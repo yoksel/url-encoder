@@ -43,8 +43,13 @@ for (var i = 0; i < expanders.length; i++) {
 
 function encodeSVG(data) {
     // Use single quotes instead of double to avoid encoding.
-    if (data.indexOf("'") < 0)
+    if (data.indexOf("'") < 0) {
         data = data.replace(/"/g, "'");
+    }
+    data = data.replace(/>\s{1,}</g, "><");
+    // data = data.replace(/'\s{1,}\//g, "><");
+    data = data.replace(/\s{2,}/g, " ");
+
     return data.replace(symbols, escape);
 }
 
