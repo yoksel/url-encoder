@@ -1,0 +1,109 @@
+BODY {
+  font: 16px/1.4 "Trebuchet MS", Arial, sans-serif;
+}
+
+A {
+  color: tomato;
+}
+
+H1 {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #CCC;
+  font: 2em/1.4 Georgia, serif;
+  text-align: center;
+  }
+
+H4 {
+  margin-bottom: .4em;
+  font: 1.3em/1.4 Georgia, serif;
+  color: steelblue;
+  }
+
+P {
+  margin: 1.2rem 0;
+  }
+
+.wrapper {
+  width: 650px;
+  margin: 2rem auto;
+  /*padding: 20px;
+  border: 1px solid #DDD;*/
+  }
+
+TEXTAREA {
+  width: 100%;
+  height: 150px;
+  margin: 0 0 1em 0;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+  }
+
+CODE {
+  padding: 0 7px;
+  background: palegoldenrod;
+  border-radius: 5px;
+  text-shadow: 1px 1px 0 white;
+  font: 14px/1 monospace;
+  color: #6a6315;
+  }
+
+CODE I {
+  font-style: italic;
+  color: black;
+  }
+
+DL , DD, DT{
+  margin: 0;
+  }
+  DL {
+    text-align: right;
+    }
+  DT {
+    border-bottom: 1px dashed;
+    display: inline-block;
+    line-height: 1;
+    color: steelblue;
+    cursor: pointer;
+    }
+    DT:after {
+      content: "";
+      display: inline-block;
+      border: 0 solid transparent;
+      border-width: 8px 4px 0;
+      border-top-color: currentColor;
+      border-bottom-color: currentColor;
+      margin-left: 5px;
+      }
+      .opened:after {
+        border-width: 0 4px 8px ;
+        }
+  DD {
+    text-align: left;
+    }
+
+.hidden {
+  display: none;
+  }
+
+.columns:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  .column {
+    width: 48%;
+    }
+    .column--left {
+      float: left;
+      }
+    .column--right {
+      float: right;
+      }
+
+#demo {
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  border: 1px dashed #CCC;
+}

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>URL-encoder для SVG</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+          <h1>URL-encoder для SVG</h1>
+
+          <dl>
+            <dt class="expander">Назначение инструмента</dt>
+            <dd class="expanded hidden">
+              <p>SVG можно использовать в CSS через data URI, но вставку незакодированного SVG поддерживают только браузеры на Webkit. Если закодировать SVG с помощью <code>escape()</code> — SVG начинает отображаться во всех современных браузерах.</p>
+              <p>Подробнее про использование SVG и разные способы вставки <br>можно почитать тут: <a href="http://css.yoksel.ru/svg-icons/">SVG-иконки</a></p>
+
+
+            </dd>
+          </dl>
+
+          <p><b>Важно:</b> у тега SVG обязательно должен быть атрибут xmlns, вот такой: <b>xmlns="http://www.w3.org/2000/svg"</b>.</p>
+
+          <div class="columns">
+            <div class="column column--left">
+                  <h4>Вставьте код SVG:</h4>
+                  <textarea name="init" id="init"></textarea>
+            </div>
+            <div class="column column--right">
+                <h4>Возьмите закодированный:</h4>
+                <textarea name="result" id="result"></textarea>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column column--left">
+                <h4>Готовый CSS-код:</h4>
+                <textarea name="result-css" id="result-css"></textarea>
+            </div>
+            <div class="column column--right">
+                <h4>Превью:</h4>
+                <div id="demo"></div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
