@@ -3,7 +3,7 @@ BODY {
 }
 
 A {
-  color: tomato;
+  color: steelblue;
 }
 
 H1 {
@@ -40,12 +40,12 @@ TEXTAREA {
   }
 
 CODE {
-  padding: 0 7px;
-  background: palegoldenrod;
+  padding: 0 3px;
+  background: #EEE;
   border-radius: 5px;
   text-shadow: 1px 1px 0 white;
-  font: 14px/1 monospace;
-  color: #6a6315;
+  font: 14px/1.4 monospace;
+  color: #333;
   }
 
 CODE I {
