@@ -24,7 +24,7 @@ P {
 
 .wrapper {
   width: 650px;
-  margin: 2rem auto;
+  margin: 2rem auto 4rem;
   /*padding: 20px;
   border: 1px solid #DDD;*/
   }
@@ -42,7 +42,6 @@ P {
     clear: both;
   }
 
-
 .langs {
   position: absolute;
   top: 0;
@@ -56,6 +55,15 @@ P {
   .langs__link--current {
     color: #000;
   }
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #CCC;
+}
 
 TEXTAREA {
   width: 100%;

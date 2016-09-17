@@ -18,40 +18,45 @@
         </ul>
       </header>
 
-      <dl>
-        <dt class="expander">About tool</dt>
-        <dd class="expanded hidden">
-          <p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>escape()</code> it will work everywhere.</p>
+      <main>
+        <dl>
+          <dt class="expander">About tool</dt>
+          <dd class="expanded hidden">
+            <p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>escape()</code> it will work everywhere.</p>
 
-          <p>SVG must have attribute <strong>xmlns</strong> like this: <code>xmlns='http://www.w3.org/2000/svg'</code>. If it doesn't exist, it will be added automagically.</p>
+            <p>SVG must have attribute <strong>xmlns</strong> like this: <code>xmlns='http://www.w3.org/2000/svg'</code>. If it doesn't exist, it will be added automagically.</p>
 
-          <p>Encoded SVG can be used in <code>background</code> (<a href="http://codepen.io/collection/DyJRrY/">demos</a>) and <code>border-image</code> (<a href="http://codepen.io/yoksel/full/GjgYgj/">demo</a>).</p>
-        </dd>
-      </dl>
+            <p>Encoded SVG can be used in <code>background</code> (<a href="http://codepen.io/collection/DyJRrY/">demos</a>) and <code>border-image</code> (<a href="http://codepen.io/yoksel/full/GjgYgj/">demo</a>).</p>
+          </dd>
+        </dl>
 
-      <div class="columns">
-        <div class="column column--left">
-            <h4>Insert your SVG:</h4>
-            <textarea name="init" id="init"></textarea>
+        <div class="columns">
+          <div class="column column--left">
+              <h4>Insert your SVG:</h4>
+              <textarea name="init" id="init"></textarea>
+          </div>
+          <div class="column column--right">
+            <h4>Take encoded:</h4>
+            <textarea name="result" id="result"></textarea>
+          </div>
         </div>
-        <div class="column column--right">
-          <h4>Take encoded:</h4>
-          <textarea name="result" id="result"></textarea>
-        </div>
-      </div>
 
-      <div class="columns">
-        <div class="column column--left">
-          <h4>Ready for CSS:</h4>
-          <textarea name="result-css" id="result-css"></textarea>
+        <div class="columns">
+          <div class="column column--left">
+            <h4>Ready for CSS:</h4>
+            <textarea name="result-css" id="result-css"></textarea>
+          </div>
+          <div class="column column--right">
+            <h4>Preview:</h4>
+            <div id="demo"></div>
+          </div>
         </div>
-        <div class="column column--right">
-          <h4>Preview:</h4>
-          <div id="demo"></div>
-        </div>
-      </div>
+      </main>
 
-
+      <footer class="footer">
+        <a href="https://github.com/yoksel/url-encoder/">Project on GitHub</a>
+        <a href="https://twitter.com/yoksel_en">@yoksel_en</a>
+      </footer>
 
     </div>
     <script src="script.js"></script>
