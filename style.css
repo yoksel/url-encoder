@@ -1,5 +1,6 @@
 BODY {
   font: 16px/1.4 "Trebuchet MS", Arial, sans-serif;
+  color: #000;
 }
 
 A {
@@ -7,9 +8,6 @@ A {
 }
 
 H1 {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #CCC;
   font: 2em/1.4 Georgia, serif;
   text-align: center;
   }
@@ -29,6 +27,34 @@ P {
   margin: 2rem auto;
   /*padding: 20px;
   border: 1px solid #DDD;*/
+  }
+
+.header {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #CCC;
+}
+  .header:before {
+    content: "";
+    display: table;
+    width: 100%;
+    clear: both;
+  }
+
+
+.langs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  list-style-type: none;
+}
+  .langs__item {
+    display: inline-block;
+  }
+  .langs__link--current {
+    color: #000;
   }
 
 TEXTAREA {
