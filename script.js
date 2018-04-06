@@ -4,9 +4,11 @@ var initTar = doc.querySelector( "#init" );
 var resTar = doc.querySelector( "#result" );
 var resCssTar = doc.querySelector( "#result-css" );
 var resDemo = doc.querySelector( "#demo" );
+var demoContrastSwitch = doc.querySelector( "#demo-contrast-switch" );
 
 var expanders = doc.querySelectorAll( ".expander" );
 var expandedClass = "expanded";
+var demoContrastClass = "demo-contrast-on";
 var symbols = /[\r\n"%#()<>?\[\\\]^`{|}]/g;
 
 // Textarea Actions
@@ -38,6 +40,14 @@ for (var i = 0; i < expanders.length; i++) {
         this.classList.toggle( "opened" );
     };
 }
+
+// Demo Contrast Switch
+//----------------------------------------
+
+demoContrastSwitch.onclick = function() {
+	this.parentElement.parentElement.classList.toggle(demoContrastClass);
+	return false;
+};
 
 // Namespace
 //----------------------------------------
