@@ -7,7 +7,7 @@ var resDemo = doc.querySelector( "#demo" );
 
 var expanders = doc.querySelectorAll( ".expander" );
 var expandedClass = "expanded";
-var symbols = /[\r\n"%#()<>?\[\\\]^`{|}]/g;
+var symbols = /[\r\n"%#()<>?\[\\\]^`'{|}]/g;
 
 // Textarea Actions
 //----------------------------------------
