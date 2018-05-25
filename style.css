@@ -13,6 +13,7 @@ H1 {
   }
 
 H4 {
+  margin-top: 0;
   margin-bottom: .4em;
   font: 1.3em/1.4 Georgia, serif;
   color: steelblue;
@@ -22,11 +23,22 @@ P {
   margin: 1.2rem 0;
   }
 
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .wrapper {
   width: 650px;
   margin: 2rem auto 4rem;
-  /*padding: 20px;
-  border: 1px solid #DDD;*/
   }
 
 .header {
@@ -71,6 +83,8 @@ TEXTAREA {
   margin: 0 0 1em 0;
   border: 1px solid #CCC;
   border-radius: 10px;
+  font-size: 13px;
+  font-family: monospace;
   }
 
 CODE {
@@ -120,24 +134,76 @@ DL , DD, DT{
   display: none;
   }
 
-.columns:after {
-  content: "";
-  display: table;
-  clear: both;
+.about {
+  margin-bottom: 32px;
   }
-  .column {
-    width: 48%;
-    }
-    .column--left {
-      float: left;
-      }
-    .column--right {
-      float: right;
-      }
 
-#demo {
+.columns {
+  margin-bottom: 32px;
+  }
+  .columns:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .column {
+      width: 48%;
+      }
+      .column--left {
+        float: left;
+        }
+      .column--right {
+        float: right;
+        }
+
+.container {
+  position: relative;
+  }
+  .container--demo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+.demo-wrapper {
   width: 100%;
-  height: 150px;
-  background-repeat: no-repeat;
-  border: 1px dashed #CCC;
-}
+  border: 1px dashed rgba(0,0,0,.25);
+  }
+  .demo {
+    height: 150px;
+    background-repeat: no-repeat;
+    }
+
+.contrast-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: .4em;
+  }
+  .contrast-button {
+    display: block;
+    width: 2em;
+    height: 2em;
+    margin-left: 5px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.25);
+    outline: none;
+    cursor: pointer;
+    }
+
+  .contrast-button--current {
+    box-shadow: 0 0 0 3px steelblue;
+    }
+  .contrast-button:active {
+    box-shadow: 0 0 0 3px rgba(0,0,0,.25);
+    }
+
+  .contrast-button--white {
+    background: white;
+    }
+  .contrast-button--silver {
+    background: silver;
+    }
+  .contrast-button--black {
+    background: black;
+    }

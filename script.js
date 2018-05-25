@@ -4,9 +4,14 @@ var initTar = doc.querySelector( "#init" );
 var resTar = doc.querySelector( "#result" );
 var resCssTar = doc.querySelector( "#result-css" );
 var resDemo = doc.querySelector( "#demo" );
+var demoWrapper = doc.querySelector( ".demo-wrapper" );
+var contrastButtons = doc.querySelectorAll( ".contrast-button" );
+var contrastButtonCurrent = null;
+var backgroundColor = '';
 
 var expanders = doc.querySelectorAll( ".expander" );
 var expandedClass = "expanded";
+var demoContrastClass = "demo-contrast-on";
 var symbols = /[\r\n"%#()<>?\[\\\]^`{|}]/g;
 
 // Textarea Actions
@@ -38,6 +43,32 @@ for (var i = 0; i < expanders.length; i++) {
         this.classList.toggle( "opened" );
     };
 }
+
+// Demo Background Switch
+//----------------------------------------
+
+function contrastButtonsSetCurrent(button) {
+    const classCurrent = 'contrast-button--current';
+
+    if (contrastButtonCurrent) {
+        contrastButtonCurrent.classList.remove(classCurrent);
+    }
+
+    backgroundColor = button.dataset.color;
+    contrastButtonCurrent = button;
+    button.classList.add(classCurrent);
+}
+
+contrastButtons.forEach(button => {
+    if (!backgroundColor) {
+        contrastButtonsSetCurrent(button);
+    }
+
+    button.addEventListener('click', function () {
+        contrastButtonsSetCurrent(this);
+        demoWrapper.style.background = backgroundColor;
+    });
+});
 
 // Namespace
 //----------------------------------------

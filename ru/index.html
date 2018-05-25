@@ -19,7 +19,7 @@
       </header>
 
       <main>
-        <dl>
+        <dl class="about">
           <dt class="expander">Назначение инструмента</dt>
           <dd class="expanded hidden">
             <p>SVG можно использовать в CSS через data URI, но вставку незакодированного SVG поддерживают только браузеры на Webkit. Если закодировать SVG с помощью <code>escape()</code> — SVG начинает отображаться во всех современных браузерах.</p>
@@ -33,24 +33,53 @@
         </dl>
 
         <div class="columns">
-          <div class="column column--left">
+          <div class="column column--left container container--init">
               <h4>Вставьте код SVG:</h4>
               <textarea name="init" id="init"></textarea>
           </div>
-          <div class="column column--right">
+
+          <div class="column column--right container container--result">
             <h4>Возьмите закодированный:</h4>
             <textarea name="result" id="result"></textarea>
           </div>
         </div>
 
         <div class="columns">
-          <div class="column column--left">
-            <h4>Готовый CSS-код для фона:</h4>
+          <div class="column column--left container container--result-css">
+            <h4>Готовый CSS для фона:</h4>
             <textarea name="result-css" id="result-css"></textarea>
           </div>
-          <div class="column column--right">
+
+          <div class="column column--right container container--demo">
             <h4>Превью:</h4>
-            <div id="demo"></div>
+
+            <div class="contrast-buttons">Фон:
+              <button
+                type="button"
+                class="contrast-button contrast-button--white"
+                data-color="white"
+                title="Белый">
+                <span class="visuallyhidden">Белый</span>
+              </button>
+              <button
+                type="button"
+                class="contrast-button contrast-button--silver"
+                data-color="silver"
+                title="Серый">
+                <span class="visuallyhidden">Серый</span>
+              </button>
+              <button
+                type="button"
+                class="contrast-button contrast-button--black"
+                data-color="black"
+                title="Черный">
+                <span class="visuallyhidden">Черный</span>
+              </button>
+            </div>
+
+            <div class="demo-wrapper">
+              <div id="demo" class="demo"></div>
+            </div>
           </div>
         </div>
       </main>
