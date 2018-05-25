@@ -4,7 +4,10 @@ var initTar = doc.querySelector( "#init" );
 var resTar = doc.querySelector( "#result" );
 var resCssTar = doc.querySelector( "#result-css" );
 var resDemo = doc.querySelector( "#demo" );
-var demoContrastSwitch = doc.querySelector( "#demo-contrast-switch" );
+var demoWrapper = doc.querySelector( ".demo-wrapper" );
+var contrastButtons = doc.querySelectorAll( ".contrast-button" );
+var contrastButtonCurrent = null;
+var backgroundColor = '';
 
 var expanders = doc.querySelectorAll( ".expander" );
 var expandedClass = "expanded";
@@ -41,13 +44,31 @@ for (var i = 0; i < expanders.length; i++) {
     };
 }
 
-// Demo Contrast Switch
+// Demo Background Switch
 //----------------------------------------
 
-demoContrastSwitch.onclick = function() {
-	this.parentElement.parentElement.classList.toggle(demoContrastClass);
-	return false;
-};
+function contrastButtonsSetCurrent(button) {
+    const classCurrent = 'contrast-button--current';
+
+    if (contrastButtonCurrent) {
+        contrastButtonCurrent.classList.remove(classCurrent);
+    }
+
+    backgroundColor = button.dataset.color;
+    contrastButtonCurrent = button;
+    button.classList.add(classCurrent);
+}
+
+contrastButtons.forEach(button => {
+    if (!backgroundColor) {
+        contrastButtonsSetCurrent(button);
+    }
+
+    button.addEventListener('click', function () {
+        contrastButtonsSetCurrent(this);
+        demoWrapper.style.background = backgroundColor;
+    });
+});
 
 // Namespace
 //----------------------------------------
