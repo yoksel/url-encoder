@@ -12,7 +12,7 @@ var backgroundColor = '';
 var expanders = doc.querySelectorAll( ".expander" );
 var expandedClass = "expanded";
 var demoContrastClass = "demo-contrast-on";
-var symbols = /[\r\n"%#()<>?\[\\\]^`{|}]/g;
+var symbols = /[\r\n%#()<>?\[\\\]^`{|}]/g;
 
 const quotesInputs = document.querySelectorAll('.options__input');
 let externalQuotesValue = document.querySelector('.options__input:checked').value;
@@ -65,7 +65,7 @@ for (var i = 0; i < expanders.length; i++) {
 //----------------------------------------
 
 quotesInputs.forEach(input => {
-   input.addEventListener('input', function () {
+    input.addEventListener('input', function () {
         externalQuotesValue = this.value;
         quotes = getQuotes();
         getResults();
@@ -133,8 +133,11 @@ function addNameSpace( data ) {
 
 function encodeSVG( data ) {
     // Use single quotes instead of double to avoid encoding.
-    if ( externalQuotesValue === 'double' && data.indexOf( '"' ) >= 0 ) {
-        data = data.replace( /"/g, "'" );
+    if ( externalQuotesValue === 'double') {
+        data = data.replace( /"/g, '\'' );
+    }
+    else {
+       data = data.replace( /'/g, '"' );
     }
 
     data = data.replace( />\s{1,}</g, "><" );
