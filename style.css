@@ -25,7 +25,7 @@ P {
 TEXTAREA {
   width: 100%;
   height: 150px;
-  margin: 0 0 1em 0;
+  margin: 0;
   border: 1px solid #CCC;
   border-radius: 10px;
   font-size: 13px;
@@ -201,6 +201,7 @@ DL , DD, DT{
 .container {
   position: relative;
   width: 48%;
+  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
