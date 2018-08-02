@@ -143,7 +143,7 @@ function encodeSVG( data ) {
     data = data.replace( />\s{1,}</g, "><" );
     data = data.replace( /\s{2,}/g, " " );
 
-    return data.replace( symbols, escape );
+    return data.replace( symbols, encodeURIComponent );
 }
 
 
