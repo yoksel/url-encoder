@@ -50,7 +50,7 @@
           <dl class="about">
             <dt class="expander">About tool</dt>
             <dd class="expanded hidden">
-              <p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>escape()</code> it will work everywhere.</p>
+              <p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>encodeURIComponent()</code> it will work everywhere.</p>
 
               <p>SVG must have attribute <strong>xmlns</strong> like this: <code>xmlns='http://www.w3.org/2000/svg'</code>. If it doesn't exist, it will be added automagically.</p>
 
