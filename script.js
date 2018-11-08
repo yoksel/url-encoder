@@ -1,17 +1,17 @@
 var doc = document;
 
-var initTextarea = doc.querySelector( "#init" );
-var resultTextarea = doc.querySelector( "#result" );
-var resultCssTextarea = doc.querySelector( "#result-css" );
-var resultDemo = doc.querySelector( "#demo" );
-var demoWrapper = doc.querySelector( ".demo-wrapper" );
-var contrastButtons = doc.querySelectorAll( ".contrast-button" );
+var initTextarea = doc.querySelector( '#init' );
+var resultTextarea = doc.querySelector( '#result' );
+var resultCssTextarea = doc.querySelector( '#result-css' );
+var resultDemo = doc.querySelector( '#demo' );
+var demoWrapper = doc.querySelector( '.demo-wrapper' );
+var contrastButtons = doc.querySelectorAll( '.contrast-button' );
 var contrastButtonCurrent = null;
 var backgroundColor = '';
 
-var expanders = doc.querySelectorAll( ".expander" );
-var expandedClass = "expanded";
-var demoContrastClass = "demo-contrast-on";
+var expanders = doc.querySelectorAll( '.expander' );
+var expandedClass = 'expanded';
+var demoContrastClass = 'demo-contrast-on';
 var symbols = /[\r\n%#()<>?\[\\\]^`{|}]/g;
 
 const quotesInputs = document.querySelectorAll('.options__input');
@@ -36,7 +36,7 @@ initTextarea.onkeyup = function() {
 function getResults() {
     if(!initTextarea.value) {
         resultCssTextarea.value = '';
-        resultDemo.setAttribute( "style", resultCss );
+        resultDemo.setAttribute( 'style', '' );
         return;
     }
 
@@ -45,7 +45,7 @@ function getResults() {
     resultTextarea.value = escaped;
     var resultCss = `background-image: url(${quotes.level1}data:image/svg+xml,${escaped}${quotes.level1});`;
     resultCssTextarea.value = resultCss;
-    resultDemo.setAttribute( "style", resultCss );
+    resultDemo.setAttribute( 'style', resultCss );
 }
 
 
@@ -57,9 +57,9 @@ for (var i = 0; i < expanders.length; i++) {
 
     expander.onclick = function() {
         var parent = this.parentNode;
-        var expanded = parent.querySelector( "." + expandedClass );
-        expanded.classList.toggle( "hidden" );
-        this.classList.toggle( "opened" );
+        var expanded = parent.querySelector( '.' + expandedClass );
+        expanded.classList.toggle( 'hidden' );
+        this.classList.toggle( 'opened' );
     };
 }
 
