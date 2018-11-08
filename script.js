@@ -24,8 +24,9 @@ const buttonExample = document.querySelector('.button-example');
 // Textarea Actions
 //----------------------------------------
 
-initTextarea.onchange = function() {
+initTextarea.oninput = function() {
     resultTextarea.value = encodeSVG(initTextarea.value);
+    getResults();
 };
 
 initTextarea.onkeyup = function() {
@@ -34,6 +35,8 @@ initTextarea.onkeyup = function() {
 
 function getResults() {
     if(!initTextarea.value) {
+        resultCssTextarea.value = '';
+        resultDemo.setAttribute( "style", resultCss );
         return;
     }
 
