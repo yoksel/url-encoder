@@ -179,7 +179,8 @@ DL , DD, DT{
   box-shadow: 0 0 0 5px rgba(0,0,0,.1);
 }
 
-.button-example {
+.button-example,
+.copy-button {
   padding: 0;
   border: 0;
   border-bottom: 1px dashed;

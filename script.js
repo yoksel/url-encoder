@@ -163,6 +163,25 @@ function getQuotes() {
     };
 }
 
+
+// Copy to clipboard
+//----------------------------------------
+
+var copyResultButton = document.getElementById("copy-result-button");
+var copyCSSResultButton = document.getElementById("copy-css-result-button");
+
+copyResultButton.addEventListener('click', function(event) {
+    var textToCopy = document.getElementById("result");
+    textToCopy.select();
+    document.execCommand("copy");
+});
+
+copyCSSResultButton.addEventListener('click', function(event) {
+    var textToCopy = document.getElementById("result-css");
+    textToCopy.select();
+    document.execCommand("copy");
+});
+
 // Common
 //----------------------------------------
 
