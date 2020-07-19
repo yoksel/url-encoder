@@ -184,6 +184,7 @@ DL , DD, DT{
   padding: 0;
   border: 0;
   border-bottom: 1px dashed;
+  background: transparent;
   line-height: 1;
   align-self: center;
   font: inherit;
