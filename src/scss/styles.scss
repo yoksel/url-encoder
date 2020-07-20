@@ -225,6 +225,7 @@ DD {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
 }
 
 .demo-wrapper {
@@ -273,4 +274,10 @@ DD {
 
 .contrast-button--black {
   background: black;
+}
+
+.tip {
+  margin-top: .5rem;
+  font-size: .9em;
+  color: #777;
 }
