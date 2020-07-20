@@ -1,5 +1,5 @@
 BODY {
-  font: 16px/1.4 "Trebuchet MS", Arial, sans-serif;
+  font: 16px/1.4 Trebuchet MS, Arial, sans-serif;
   color: #000; }
 
 A {
@@ -38,7 +38,9 @@ CODE I {
   font-style: italic;
   color: black; }
 
-DL, DD, DT {
+DL,
+DD,
+DT {
   margin: 0; }
 
 DL {
@@ -51,7 +53,7 @@ DT {
   color: steelblue;
   cursor: pointer; }
 
-DT:after {
+DT::after {
   content: "";
   display: inline-block;
   border: 0 solid transparent;
@@ -60,7 +62,7 @@ DT:after {
   border-bottom-color: currentColor;
   margin-left: 5px; }
 
-.opened:after {
+.opened::after {
   border-width: 0 4px 8px; }
 
 DD {
@@ -91,7 +93,7 @@ DD {
   padding-bottom: 1rem;
   border-bottom: 1px solid #CCC; }
 
-.header:before {
+.header::before {
   content: "";
   display: table;
   width: 100%;
@@ -165,9 +167,9 @@ DD {
   border: 0;
   border-bottom: 1px dashed;
   background: transparent;
-  line-height: 1;
   align-self: center;
   font: inherit;
+  line-height: 1;
   font-size: 14px;
   color: steelblue;
   cursor: pointer; }
@@ -184,7 +186,8 @@ DD {
   margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-content: flex-start; }
 
 .demo-wrapper {
   width: 100%;
@@ -224,3 +227,8 @@ DD {
 
 .contrast-button--black {
   background: black; }
+
+.tip {
+  margin-top: .5rem;
+  font-size: .9em;
+  color: #777; }

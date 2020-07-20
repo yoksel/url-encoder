@@ -26,6 +26,15 @@ initTextarea.oninput = function () {
   getResults();
 };
 
+resultTextarea.oninput = function () {
+  const value = resultTextarea.value.trim()
+    .replace(/background-image:\s{0,}url\(/, ``)
+    .replace(/["']{0,}data:image\/svg\+xml,/, ``)
+    .replace(/["']\);{0,}$/, ``);
+  initTextarea.value = decodeURIComponent(value);
+  getResults();
+};
+
 function getResults () {
   if (!initTextarea.value) {
     resultCssTextarea.value = ``;
