@@ -1,0 +1,30 @@
+{
+  "name": "url-encoder",
+  "version": "1.0.0",
+  "description": "http://yoksel.github.io/url-encoder",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "js:lint": "eslint *.js",
+    "js:fix": "eslint *.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoksel/url-encoder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoksel/url-encoder/issues"
+  },
+  "homepage": "https://github.com/yoksel/url-encoder#readme",
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "7.5.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1"
+  }
+}
