@@ -3,7 +3,6 @@ const sass = require(`gulp-sass`);
 sass.compiler = require(`node-sass`);
 const sync = require(`browser-sync`).create();
 const reload = sync.reload;
-const ghPages = require(`gulp-gh-pages`);
 const colors = require(`colors/safe`);
 const del = require(`del`);
 const mustache = require(`gulp-mustache`);
