@@ -1,20 +1,19 @@
 <html>
   <head>
-    <title>URL-encoder for SVG</title>
-    <link rel="stylesheet" href="style.css">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{path}}/assets/css/styles.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1>URL-encoder for SVG</h1>
+        <h1>{{title}}</h1>
 
         <ul class="langs">
+          {{#langs}}
           <li class="langs__item">
-            <a class="langs__link langs__link--current">En</a>
+            {{{.}}}
           </li>
-          <li class="langs__item">
-            <a class="langs__link" href="../url-encoder/ru">Рус</a>
-          </li>
+          {{/langs}}
         </ul>
       </header>
 
@@ -22,7 +21,7 @@
         <div class="panel">
 
           <div class="options">
-              External quotes:
+              {{quotes}}:
               <label class="options__label">
                 <input
                   type="radio"
@@ -30,7 +29,7 @@
                   name="quotes"
                   class="options__input visuallyhidden"
                 >
-                <span class="options__text">single</span>
+                <span class="options__text">{{single}}</span>
               </label>
 
               <span class="options__middle-word">/</span>
@@ -43,27 +42,26 @@
                   class="options__input visuallyhidden"
                   checked
                 >
-                <span class="options__text">double</span>
+                <span class="options__text">{{double}}</span>
               </label>
           </div>
 
 
           <dl class="about">
-            <dt class="expander">About tool</dt>
+            <dt class="expander">{{aboutTitle}}</dt>
+
             <dd class="expanded hidden">
-              <p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>encodeURIComponent()</code> it will work everywhere.</p>
-
-              <p>SVG must have attribute <strong>xmlns</strong> like this: <code>xmlns='http://www.w3.org/2000/svg'</code>. If it doesn't exist, it will be added automagically.</p>
-
-              <p>Encoded SVG can be used in <code>background</code> (<a href="http://codepen.io/collection/DyJRrY/">demos</a>) and <code>border-image</code> (<a href="http://codepen.io/yoksel/full/GjgYgj/">demo</a>).</p>
+              {{{aboutText}}}
             </dd>
           </dl>
         </div>
 
         <div class="containers">
           <div class="container container--left container container--init">
-              <h4>Insert your SVG:</h4>
-              <button class="button-example">Example</button>
+              <h4>{{insertSVG}}:</h4>
+
+              <button class="button-example">{{example}}</button>
+
               <textarea
                 name="init"
                 id="init"
@@ -72,8 +70,13 @@
           </div>
 
           <div class="container container--right container container--result">
-            <h4>Take encoded:</h4>
-            <button id="copy-result-button" title="Copy encoded results to clipboard" class="copy-button">Copy</button>
+            <h4>{{takeEncoded}}:</h4>
+
+            <button
+              id="copy-result-button"
+              title="Copy encoded results to clipboard"
+              class="copy-button">{{copy}}</button>
+
             <textarea
               name="result"
               id="result"
@@ -84,8 +87,11 @@
 
         <div class="containers">
           <div class="container container--left container container--result-css">
-            <h4>Ready for CSS:</h4>
-            <button id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">Copy</button>
+            <h4>{{readyForCSS}}:</h4>
+
+            <button
+              id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">{{copy}}</button>
+
             <textarea
               name="result-css"
               id="result-css"
@@ -94,29 +100,31 @@
           </div>
 
           <div class="container container--right container container--demo">
-            <h4>Preview:</h4>
+            <h4>{{preview}}:</h4>
 
-            <div class="contrast-buttons">Background:
+            <div class="contrast-buttons">{{background}}:
               <button
                 type="button"
                 class="contrast-button contrast-button--white"
                 data-color="white"
-                title="White">
-                <span class="visuallyhidden">White</span>
+                title="{{white}}">
+                <span class="visuallyhidden">{{white}}</span>
               </button>
+
               <button
                 type="button"
                 class="contrast-button contrast-button--silver"
                 data-color="silver"
-                title="Silver">
-                <span class="visuallyhidden">Silver</span>
+                title="{{silver}}">
+                <span class="visuallyhidden">{{silver}}</span>
               </button>
+
               <button
                 type="button"
                 class="contrast-button contrast-button--black"
                 data-color="black"
-                title="Black">
-                <span class="visuallyhidden">Black</span>
+                title="{{black}}">
+                <span class="visuallyhidden">{{black}}</span>
               </button>
             </div>
 
@@ -128,12 +136,12 @@
       </main>
 
       <footer class="footer">
-        <a href="https://github.com/yoksel/url-encoder/">Project on GitHub</a>
-        <a href="https://twitter.com/yoksel_en">@yoksel_en</a>
+        <a href="https://github.com/yoksel/url-encoder/">{{projectOn}} GitHub</a>
+        <a href="https://twitter.com/{{twitter}}">@{{twitter}}</a>
       </footer>
 
     </div>
-    <script src="script.js"></script>
+    <script src="{{path}}/assets/js/script.js"></script>
 
     <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49839931 = new Ya.Metrika2({ id:49839931, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49839931" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   </body>

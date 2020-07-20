@@ -1,5 +1,8 @@
+$black-transp-25: rgba(0, 0, 0, .25);
+$gray: #CCC;
+
 BODY {
-  font: 16px/1.4 "Trebuchet MS", Arial, sans-serif;
+  font: 16px/1.4 Trebuchet MS, Arial, sans-serif;
   color: #000;
 }
 
@@ -10,27 +13,27 @@ A {
 H1 {
   font: 2em/1.4 Georgia, serif;
   text-align: center;
-  }
+}
 
 H4 {
   margin: 0;
   margin-bottom: .15em;
   font: 1.3em/1.4 Georgia, serif;
-  }
+}
 
 P {
   margin: 1.2rem 0;
-  }
+}
 
 TEXTAREA {
   width: 100%;
   height: 150px;
   margin: 0;
-  border: 1px solid #CCC;
+  border: 1px solid $gray;
   border-radius: 10px;
   font-size: 13px;
   font-family: monospace;
-  }
+}
 
 CODE {
   padding: 0 3px;
@@ -39,45 +42,52 @@ CODE {
   text-shadow: 1px 1px 0 white;
   font: 14px/1.4 monospace;
   color: #333;
-  }
+}
 
 CODE I {
   font-style: italic;
   color: black;
-  }
+}
 
-DL , DD, DT{
+DL,
+DD,
+DT {
   margin: 0;
-  }
-  DL {
-    text-align: right;
-    }
-  DT {
-    border-bottom: 1px dashed;
-    display: inline-block;
-    line-height: 1;
-    color: steelblue;
-    cursor: pointer;
-    }
-    DT:after {
-      content: "";
-      display: inline-block;
-      border: 0 solid transparent;
-      border-width: 8px 4px 0;
-      border-top-color: currentColor;
-      border-bottom-color: currentColor;
-      margin-left: 5px;
-      }
-      .opened:after {
-        border-width: 0 4px 8px ;
-        }
-  DD {
-    text-align: left;
-    }
+}
+
+DL {
+  text-align: right;
+}
+
+DT {
+  border-bottom: 1px dashed;
+  display: inline-block;
+  line-height: 1;
+  color: steelblue;
+  cursor: pointer;
+}
+
+DT::after {
+  content: "";
+  display: inline-block;
+  border: 0 solid transparent;
+  border-width: 8px 4px 0;
+  border-top-color: currentColor;
+  border-bottom-color: currentColor;
+  margin-left: 5px;
+}
+
+.opened::after {
+  border-width: 0 4px 8px;
+}
+
+DD {
+  text-align: left;
+}
 
 .hidden {
   display: none;
-  }
+}
 
 .visuallyhidden {
   position: absolute;
@@ -95,34 +105,41 @@ DL , DD, DT{
 .wrapper {
   width: 650px;
   margin: 1.5rem auto 4rem;
-  }
+}
 
 .header {
   position: relative;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid $gray;
 }
-  .header:before {
-    content: "";
-    display: table;
-    width: 100%;
-    clear: both;
-  }
+
+.header::before {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
 
 .langs {
   position: absolute;
   top: 0;
   right: 0;
   margin: auto;
+  display: flex;
   list-style-type: none;
+
+  A:not([href]) {
+    font-weight: bold;
+    color: inherit;
+  }
 }
-  .langs__item {
-    display: inline-block;
+
+.langs__item {
+  & + & {
+    margin-left: .5rem;
   }
-  .langs__link--current {
-    color: #000;
-  }
+}
 
 .footer {
   position: relative;
@@ -130,7 +147,7 @@ DL , DD, DT{
   justify-content: space-between;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid $gray;
 }
 
 .panel {
@@ -147,7 +164,7 @@ DL , DD, DT{
 
 .options__middle-word {
   vertical-align: middle;
-  color: #AAA
+  color: #AAA;
 }
 
 .options__text {
@@ -156,6 +173,7 @@ DL , DD, DT{
   color: steelblue;
   cursor: pointer;
 }
+
 .options__input:checked + .options__text {
   border: 0;
   color: inherit;
@@ -174,9 +192,9 @@ DL , DD, DT{
   left: -15px;
   padding: 2rem 1.5rem 1rem;
   background: #FFF;
-  border: 1px solid #CCC;
+  border: 1px solid $gray;
   border-radius: 5px;
-  box-shadow: 0 0 0 5px rgba(0,0,0,.1);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
 }
 
 .button-example,
@@ -185,9 +203,9 @@ DL , DD, DT{
   border: 0;
   border-bottom: 1px dashed;
   background: transparent;
-  line-height: 1;
   align-self: center;
   font: inherit;
+  line-height: 1;
   font-size: 14px;
   color: steelblue;
   cursor: pointer;
@@ -198,7 +216,7 @@ DL , DD, DT{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  }
+}
 
 .container {
   position: relative;
@@ -207,47 +225,52 @@ DL , DD, DT{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  }
+}
 
 .demo-wrapper {
   width: 100%;
-  border: 1px dashed rgba(0,0,0,.25);
-  }
-  .demo {
-    height: 150px;
-    background-repeat: no-repeat;
-    }
+  border: 1px dashed $black-transp-25;
+}
+
+.demo {
+  height: 150px;
+  background-repeat: no-repeat;
+}
 
 .contrast-buttons {
   display: flex;
   align-items: center;
   margin-bottom: .4em;
-  }
-  .contrast-button {
-    display: block;
-    width: 2em;
-    height: 2em;
-    margin-left: 5px;
-    padding: 0;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,.25);
-    outline: none;
-    cursor: pointer;
-    }
+}
 
-  .contrast-button--current {
-    box-shadow: 0 0 0 3px steelblue;
-    }
-  .contrast-button:active {
-    box-shadow: 0 0 0 3px rgba(0,0,0,.25);
-    }
+.contrast-button {
+  display: block;
+  width: 2em;
+  height: 2em;
+  margin-left: 5px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid $black-transp-25;
+  outline: none;
+  cursor: pointer;
+}
 
-  .contrast-button--white {
-    background: white;
-    }
-  .contrast-button--silver {
-    background: silver;
-    }
-  .contrast-button--black {
-    background: black;
-    }
+.contrast-button--current {
+  box-shadow: 0 0 0 3px steelblue;
+}
+
+.contrast-button:active {
+  box-shadow: 0 0 0 3px $black-transp-25;
+}
+
+.contrast-button--white {
+  background: white;
+}
+
+.contrast-button--silver {
+  background: silver;
+}
+
+.contrast-button--black {
+  background: black;
+}

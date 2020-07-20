@@ -4,8 +4,15 @@
   "description": "http://yoksel.github.io/url-encoder",
   "main": ".eslintrc.js",
   "scripts": {
-    "js:lint": "eslint *.js",
-    "js:fix": "eslint *.js --fix"
+    "start": "gulp clean && gulp serve",
+    "build": "gulp clean && gulp build",
+    "deploy": "npm run build && gh-pages -d build -b gh-pages",
+    "lint": "npm run js:lint && npm run css:lint",
+    "lint:fix": "npm run js:fix && npm run css:fix",
+    "js:lint": "eslint src",
+    "js:fix": "eslint src --fix",
+    "css:lint": "stylelint **/*.scss",
+    "css:fix": "stylelint **/*.scss --fix"
   },
   "repository": {
     "type": "git",
@@ -20,11 +27,24 @@
   "homepage": "https://github.com/yoksel/url-encoder#readme",
   "devDependencies": {
     "babel-eslint": "10.1.0",
+    "browser-sync": "^2.26.10",
+    "colors": "^1.1.2",
+    "del": "^2.2.0",
     "eslint": "7.5.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1"
-  }
+    "eslint-plugin-standard": "4.0.1",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-mustache": "^5.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-standard": "^19.0.0"
+  },
+  "dependencies": {}
 }

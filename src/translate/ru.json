@@ -1,0 +1,25 @@
+{
+  "path": "..",
+  "title": "URL-encoder для SVG",
+  "quotes": "Внешние кавычки",
+  "single": "oдинарные",
+  "double": "двойные",
+  "aboutTitle": "Назначение инструмента",
+  "aboutText": "<p>SVG можно использовать в CSS через data URI, но вставку незакодированного SVG поддерживают только браузеры на Webkit. Если закодировать SVG с помощью <code>encodeURIComponent()</code> — SVG начинает отображаться во всех современных браузерах.</p><p>У тега SVG обязательно должен быть атрибут xmlns, вот такой: <b>xmlns='http://www.w3.org/2000/svg'</b>. Если его нет, он будет добавлен автоматически.</p><p>Закодированный SVG можно использовать в <code>background</code>, в <code>border-image</code> или в <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>демо</a>).</p>",
+  "insertSVG": "Вставьте код SVG",
+  "example": "Пример",
+  "takeEncoded": "Закодированный",
+  "copy": "Скопировать",
+  "readyForCSS": "CSS для фона",
+  "preview": "Превью",
+  "background": "Фон",
+  "white": "белый",
+  "silver": "серый",
+  "black": "черный",
+  "projectOn": "Проект на",
+  "twitter": "yoksel",
+  "langs": [
+    "<a href=\"../\">En</a>",
+    "<a>Рус</a>"
+  ]
+}

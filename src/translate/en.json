@@ -1,0 +1,25 @@
+{
+  "path": ".",
+  "title": "URL-encoder for SVG",
+  "quotes": "External quotes",
+  "single": "single",
+  "double": "double",
+  "aboutTitle": "About tool",
+  "aboutText": "<p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>encodeURIComponent()</code> it will work everywhere.</p><p>SVG must have attribute <strong>xmlns</strong> like this: <code>xmlns='http: //www.w3.org/2000/svg'</code>. If it doesn't exist, it will be added automagically.</p><p>Encoded SVG can be used in <code>background</code>, in <code>border-image</code> or in <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>live demo</a>).</p>",
+  "insertSVG": "Insert SVG",
+  "example": "Example",
+  "takeEncoded": "Take encoded",
+  "copy": "Copy",
+  "readyForCSS": "Ready for CSS",
+  "preview": "Preview",
+  "background": "Background",
+  "white": "white",
+  "silver": "silver",
+  "black": "black",
+  "projectOn": "Project on",
+  "twitter": "yoksel_en",
+  "langs": [
+    "<a>En</a>",
+    "<a href=\"./ru\">Рус</a>"
+  ]
+}
