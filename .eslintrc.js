@@ -15,6 +15,6 @@ module.exports = {
   rules: {
     semi: ['error', 'always'],
     indent: ['error', 2],
-    quotes: [2, 'single']
+    quotes: [2, 'backtick']
   }
 };
