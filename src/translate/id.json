@@ -1,0 +1,26 @@
+{
+  "path": ".",
+  "title": "URL-encoder untuk File SVG",
+  "quotes": "Tanda Petik",
+  "single": "Satu",
+  "double": "Dua",
+  "aboutTitle": "Tentang Tool ini",
+  "aboutText": "<p>Kita dapat menggunakan SVG didalam CSS melalaui data URI, tetapi jika tanpa menggunakan encoding, file SVG tersebut hanya bekerja pada Webkit berdasarkan Browser. Jika kita meng-encode SVG menggunakan <code>encodeURIComponent()</code> maka akan bekerja.</p><p>SVG harus memiliki atribut <strong>xmlns</strong> seperti berikut: <code>xmlns='http: //www.w3.org/2000/svg'</code>. Jika tidak ada, maka akan ditambahkan secara otomatis.</p><p>SVG yang sudah di Encode dapat digunakan pada <code>background</code>, <code>border-image</code> atau didalam <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>Live Demo</a>).</p>",
+  "insertSVG": "Masukkan SVG",
+  "example": "Contoh",
+  "takeEncoded": "Encode",
+  "copy": "Salin",
+  "readyForCSS": "Siap untuk CSS",
+  "preview": "Preview",
+  "background": "Background",
+  "white": "Putih",
+  "silver": "Silver",
+  "black": "Hitam",
+  "projectOn": "Project di",
+  "twitter": "yoksel_en",
+  "langs": [
+    "<a>Id</a>",
+    "<a href=\"./id\">Id</a>"
+  ],
+  "decodeTip": "Mungkin anda harus menempatkan SVG yang telah di Encode disini untuk dapat di decode kembali"
+}
