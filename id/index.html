@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <title>URL-encoder untuk File SVG</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>URL-encoder untuk File SVG</h1>
+
+        <ul class="langs">
+          <li class="langs__item">
+            <a>En</a>
+          </li>
+          <li class="langs__item">
+            <a href="./ru">Рус</a>
+          </li>
+          <li class="langs__item">
+            <a href="./id">Id</a>
+          </li>
+        </ul>
+      </header>
+
+      <main>
+        <div class="panel">
+
+          <div class="options">
+              Tanda Petik:
+              <label class="options__label">
+                <input
+                  type="radio"
+                  value="single"
+                  name="quotes"
+                  class="options__input visuallyhidden"
+                >
+                <span class="options__text">Satu</span>
+              </label>
+
+              <span class="options__middle-word">/</span>
+
+              <label class="options__label">
+                <input
+                  type="radio"
+                  value="double"
+                  name="quotes"
+                  class="options__input visuallyhidden"
+                  checked
+                >
+                <span class="options__text">Dua</span>
+              </label>
+          </div>
+
+
+          <dl class="about">
+            <dt class="expander">Tentang Tool ini</dt>
+
+            <dd class="expanded hidden">
+                <p>Kita dapat menggunakan SVG didalam CSS melalaui data URI, tetapi jika tanpa menggunakan encoding, file SVG tersebut hanya bekerja pada Webkit berdasarkan Browser. Jika kita meng-encode SVG menggunakan <code>encodeURIComponent()</code> maka akan bekerja.</p><p>SVG harus memiliki atribut <strong>xmlns</strong> seperti berikut: <code>xmlns='http: //www.w3.org/2000/svg'</code>. Jika tidak ada, maka akan ditambahkan secara otomatis.</p><p>SVG yang sudah di Encode dapat digunakan pada <code>background</code>, <code>border-image</code> atau didalam <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>Live Demo</a>).</p>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="containers">
+          <div class="container container--left container container--init">
+              <h4>Masukkan SVG:</h4>
+
+              <button class="button-example">Contoh</button>
+
+              <textarea
+                name="init"
+                id="init"
+                spellcheck="false"
+                ></textarea>
+          </div>
+
+          <div class="container container--right container container--result">
+            <h4>Encode:</h4>
+
+            <button
+              id="copy-result-button"
+              title="Copy encoded results to clipboard"
+              class="copy-button">Salin</button>
+
+            <textarea
+              name="result"
+              id="result"
+              spellcheck="false"
+            ></textarea>
+
+            <div class="tip">Mungkin anda harus menempatkan SVG yang telah di Encode disini untuk dapat di decode kembali</div>
+          </div>
+        </div>
+
+        <div class="containers">
+          <div class="container container--left container container--result-css">
+            <h4>Siap untuk CSS:</h4>
+
+            <button
+              id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">Salin</button>
+
+            <textarea
+              name="result-css"
+              id="result-css"
+              spellcheck="false"
+            ></textarea>
+          </div>
+
+          <div class="container container--right container container--demo">
+            <h4>Preview:</h4>
+
+            <div class="contrast-buttons">Background:
+              <button
+                type="button"
+                class="contrast-button contrast-button--white"
+                data-color="white"
+                title="white">
+                <span class="visuallyhidden">Putih</span>
+              </button>
+
+              <button
+                type="button"
+                class="contrast-button contrast-button--silver"
+                data-color="silver"
+                title="silver">
+                <span class="visuallyhidden">Silver</span>
+              </button>
+
+              <button
+                type="button"
+                class="contrast-button contrast-button--black"
+                data-color="black"
+                title="black">
+                <span class="visuallyhidden">Hitam</span>
+              </button>
+            </div>
+
+            <div class="demo-wrapper">
+              <div id="demo" class="demo"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <a href="https://github.com/yoksel/url-encoder/">Project di GitHub</a>
+        <a href="https://twitter.com/yoksel_en">@yoksel_en</a>
+      </footer>
+
+    </div>
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49839931 = new Ya.Metrika2({ id:49839931, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49839931" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  </body>
+</html>
