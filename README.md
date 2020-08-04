@@ -19,3 +19,4 @@ Demo: https://codepen.io/yoksel/full/WNrLpYW.
 4. Run `npm start` in console (wait until project will be opened in browser) and check all pages:
     * Link to new page must appear in all pages
     * In the page with new translate new language in list must looks like current (bold and black)
+5. Send pull request
