@@ -20,8 +20,8 @@
   "twitter": "yoksel_en",
   "langs": [
     "<a>En</a>",
-    "<a href=\"./ru\">Рус</a>",
-    "<a href=\"./de\">DE</a>"
+    "<a href=\"../ru\">Рус</a>",
+    "<a href=\"../de\">DE</a>"
   ],
   "decodeTip": "You may place encoded SVG here to decode it back"
 }

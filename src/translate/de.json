@@ -1,7 +1,7 @@
 {
-  "path": ".",
+  "path": "..",
   "title": "URL-encoder für SVG",
-  "quotes": "Externe Anführungszeichen",
+  "quotes": "Äußere Anführungszeichen",
   "single": "einfach",
   "double": "doppelt",
   "aboutTitle": "Über das Tool",
@@ -20,8 +20,8 @@
   "twitter": "j0e_org",
   "langs": [
     "<a href=\"../\">En</a>",
-    "<a href=\"./ru\">Рус</a>",
+    "<a href=\"../ru\">Рус</a>",
     "<a>DE</a>"
   ],
-  "decodeTip": "Du kannst kodiertes SVG hier platzieren, um es zurück zu dekodieren"
+  "decodeTip": "Du kannst kodierte SVG hier platzieren, um es zurück zu dekodieren"
 }

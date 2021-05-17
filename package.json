@@ -44,6 +44,5 @@
     "node-sass": "^4.14.1",
     "stylelint": "^13.0.0",
     "stylelint-config-standard": "^19.0.0"
-  },
-  "dependencies": {}
+  }
 }
