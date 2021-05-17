@@ -45,7 +45,7 @@ function getResults () {
   const namespaced = addNameSpace(initTextarea.value);
   const escaped = encodeSVG(namespaced);
   resultTextarea.value = escaped;
-  const resultCss = `background-image: url(${quotes.level1}data:image/svg+xml,${escaped}${quotes.level1});`;
+  const resultCss = `background-image: url(${quotes.level1}data:image/svg+xml,${escaped}${quotes.level1});\nbackground-repeat: no-repeat no-repeat;\nbackground-position: center center;\nbackground-size: cover;`;
   resultCssTextarea.value = resultCss;
   resultDemo.setAttribute(`style`, resultCss);
 }
@@ -79,13 +79,8 @@ quotesInputs.forEach(input => {
 // ----------------------------------------
 
 buttonExample.addEventListener(`click`, () => {
-  initTextarea.value = `<svg>
-  <circle r="50" cx="50" cy="50" fill="tomato"/>
-  <circle r="41" cx="47" cy="50" fill="orange"/>
-  <circle r="33" cx="48" cy="53" fill="gold"/>
-  <circle r="25" cx="49" cy="51" fill="yellowgreen"/>
-  <circle r="17" cx="52" cy="50" fill="lightseagreen"/>
-  <circle r="9" cx="55" cy="48" fill="teal"/>
+  initTextarea.value = `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
+    <path d="M0 178c33.4-19.2 100.2-111.2 167-96 66.8 15.2 100.4 166.8 167 172 66.6 5.2 132.8-116.8 166-146v192H0z" fill="#990000"/>
 </svg>`;
   getResults();
 });

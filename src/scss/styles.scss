@@ -103,7 +103,7 @@ DD {
 }
 
 .wrapper {
-  width: 650px;
+  width: 1180px;
   margin: 1.5rem auto 4rem;
 }
 
@@ -153,7 +153,7 @@ DD {
 .panel {
   position: relative;
   z-index: 1;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -234,8 +234,11 @@ DD {
 }
 
 .demo {
-  height: 150px;
-  background-repeat: no-repeat;
+  height: 300px;
+}
+
+#result-css {
+  height: 300px;
 }
 
 .contrast-buttons {
