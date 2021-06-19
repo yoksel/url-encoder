@@ -1,0 +1,27 @@
+{
+  "path": "..",
+  "title": "給 SVG 使用的 URL-encoder",
+  "quotes": "引號 ",
+  "single": "單個",
+  "double": "雙重",
+  "aboutTitle": "關於此工具",
+  "aboutText": "<p>我們可以通過數據 URI 在 CSS 中使用 SVG，但無需編碼，它僅在基於 Webkit 的瀏覽器中有效。如果使用 <code>encodeURIComponent()</code> 對 SVG 進行編碼，它將在任何地方都可以使用。</p><p>SVG 必須具有如下屬性 <strong>xmlns</strong> 像這樣：<code>xmlns='http: //www.w3.org/2000/svg'</code>。如果不存在，則會自動添加。</p><p>編碼的 SVG 可以在 <code>background</code>，<code>border-image</code> 或 <code>mask</code> 中使用（<a href='https://codepen.io/yoksel/full/WNrLpYW'>實時演示</a>）。</p>",
+  "insertSVG": "插入 SVG ",
+  "example": "例子",
+  "takeEncoded": "編碼後 ",
+  "copy": "複製",
+  "readyForCSS": "在 CSS 裡使用 ",
+  "preview": "預覽 ",
+  "background": "背景 ",
+  "white": "白色",
+  "silver": "銀色",
+  "black": "黑色",
+  "projectOn": "項目在 ",
+  "twitter": "yoksel_en",
+  "langs": [
+    "<a href=\"../\">En</a>",
+    "<a href=\"../ru\">Рус</a>",
+    "<a>Tc</a>"
+  ],
+  "decodeTip": "您可以將編碼後的 SVG 放在此處以將其解碼回去"
+}
