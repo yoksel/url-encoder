@@ -1,0 +1,23 @@
+{
+	"path": ".",
+	"title": "Mã hóa URL cho SVG",
+	"quotes": "Chọn dấu nháy",
+	"single": "Nháy đơn",
+	"double": "Nháy kép",
+	"aboutTitle": "Thông tin công cụ",
+	"aboutText": "<p>Chúng ta có thể sử dụng SVG trong CSS thông qua URI, nếu không mã hóa, nó chỉ hoạt động trong các trình duyệt dựa trên Webkit. Nếu mã hóa SVG bằng <code>encodeURIComponent()</code>, nó sẽ hoạt động ở mọi nơi.</p><p>SVG phải có thuộc tính <strong>xmlns</strong> như sau: <code>xmlns='http: //www.w3.org/2000/svg'</code>. Nếu không tồn tại, nó sẽ được thêm tự động. </p><p> SVG được mã hóa có thể được sử dụng trong <code>background</code>, trong <code>border-image</code> hoặc trong <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>demo</a>).</p>",
+	"insertSVG": "Thêm SVG",
+	"example": "Ví dụ",
+	"takeEncoded": "Kết quả",
+	"copy": "Sao chép",
+	"readyForCSS": "Code CSS",
+	"preview": "Xem trước",
+	"background": "Hình nền",
+	"white": "trắng",
+	"silver": "bạc",
+	"black": "đen",
+	"projectOn": "Dự án trên",
+	"twitter": "yoksel_en",
+	"langs": ["<a>En</a>", "<a href=\"./ru\">Рус</a>", "<a href=\"./vi\">Vn</a>"],
+	"decodeTip": "Bạn có thể đặt SVG đã mã hóa vào đây để giải mã lại"
+}
