@@ -1,22 +1,22 @@
 <html>
   <head>
-    <title>URL-encoder для SVG</title>
+    <title>給 SVG 使用的 URL-encoder</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1>URL-encoder для SVG</h1>
+        <h1>給 SVG 使用的 URL-encoder</h1>
 
         <ul class="langs">
           <li class="langs__item">
             <a href="../">En</a>
           </li>
           <li class="langs__item">
-            <a>Рус</a>
+            <a href="../ru">Рус</a>
           </li>
           <li class="langs__item">
-            <a href="../zh-tw">Tc</a>
+            <a>Tc</a>
           </li>
         </ul>
       </header>
@@ -25,7 +25,7 @@
         <div class="panel">
 
           <div class="options">
-              Внешние кавычки:
+              引號 :
               <label class="options__label">
                 <input
                   type="radio"
@@ -33,7 +33,7 @@
                   name="quotes"
                   class="options__input visuallyhidden"
                 >
-                <span class="options__text">oдинарные</span>
+                <span class="options__text">單個</span>
               </label>
 
               <span class="options__middle-word">/</span>
@@ -46,25 +46,25 @@
                   class="options__input visuallyhidden"
                   checked
                 >
-                <span class="options__text">двойные</span>
+                <span class="options__text">雙重</span>
               </label>
           </div>
 
 
           <dl class="about">
-            <dt class="expander">Назначение инструмента</dt>
+            <dt class="expander">關於此工具</dt>
 
             <dd class="expanded hidden">
-              <p>SVG можно использовать в CSS через data URI, но вставку незакодированного SVG поддерживают только браузеры на Webkit. Если закодировать SVG с помощью <code>encodeURIComponent()</code> — SVG начинает отображаться во всех современных браузерах.</p><p>У тега SVG обязательно должен быть атрибут xmlns, вот такой: <b>xmlns='http://www.w3.org/2000/svg'</b>. Если его нет, он будет добавлен автоматически.</p><p>Закодированный SVG можно использовать в <code>background</code>, в <code>border-image</code> или в <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>демо</a>).</p>
+              <p>我們可以通過數據 URI 在 CSS 中使用 SVG，但無需編碼，它僅在基於 Webkit 的瀏覽器中有效。如果使用 <code>encodeURIComponent()</code> 對 SVG 進行編碼，它將在任何地方都可以使用。</p><p>SVG 必須具有如下屬性 <strong>xmlns</strong> 像這樣：<code>xmlns='http: //www.w3.org/2000/svg'</code>。如果不存在，則會自動添加。</p><p>編碼的 SVG 可以在 <code>background</code>，<code>border-image</code> 或 <code>mask</code> 中使用（<a href='https://codepen.io/yoksel/full/WNrLpYW'>實時演示</a>）。</p>
             </dd>
           </dl>
         </div>
 
         <div class="containers">
           <div class="container container--left container container--init">
-              <h4>Вставьте код SVG:</h4>
+              <h4>插入 SVG :</h4>
 
-              <button class="button-example">Пример</button>
+              <button class="button-example">例子</button>
 
               <textarea
                 name="init"
@@ -74,12 +74,12 @@
           </div>
 
           <div class="container container--right container container--result">
-            <h4>Закодированный:</h4>
+            <h4>編碼後 :</h4>
 
             <button
               id="copy-result-button"
               title="Copy encoded results to clipboard"
-              class="copy-button">Скопировать</button>
+              class="copy-button">複製</button>
 
             <textarea
               name="result"
@@ -87,16 +87,16 @@
               spellcheck="false"
             ></textarea>
 
-            <div class="tip">Сюда можно вставить закодированный SVG, чтобы раскодировать его обратно</div>
+            <div class="tip">您可以將編碼後的 SVG 放在此處以將其解碼回去</div>
           </div>
         </div>
 
         <div class="containers">
           <div class="container container--left container container--result-css">
-            <h4>CSS для фона:</h4>
+            <h4>在 CSS 裡使用 :</h4>
 
             <button
-              id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">Скопировать</button>
+              id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">複製</button>
 
             <textarea
               name="result-css"
@@ -106,31 +106,31 @@
           </div>
 
           <div class="container container--right container container--demo">
-            <h4>Превью:</h4>
+            <h4>預覽 :</h4>
 
-            <div class="contrast-buttons">Фон:
+            <div class="contrast-buttons">背景 :
               <button
                 type="button"
                 class="contrast-button contrast-button--white"
                 data-color="white"
-                title="белый">
-                <span class="visuallyhidden">белый</span>
+                title="白色">
+                <span class="visuallyhidden">白色</span>
               </button>
 
               <button
                 type="button"
                 class="contrast-button contrast-button--silver"
                 data-color="silver"
-                title="серый">
-                <span class="visuallyhidden">серый</span>
+                title="銀色">
+                <span class="visuallyhidden">銀色</span>
               </button>
 
               <button
                 type="button"
                 class="contrast-button contrast-button--black"
                 data-color="black"
-                title="черный">
-                <span class="visuallyhidden">черный</span>
+                title="黑色">
+                <span class="visuallyhidden">黑色</span>
               </button>
             </div>
 
@@ -142,8 +142,8 @@
       </main>
 
       <footer class="footer">
-        <a href="https://github.com/yoksel/url-encoder/">Проект на GitHub</a>
-        <a href="https://twitter.com/yoksel">@yoksel</a>
+        <a href="https://github.com/yoksel/url-encoder/">項目在  GitHub</a>
+        <a href="https://twitter.com/yoksel_en">@yoksel_en</a>
       </footer>
 
     </div>
