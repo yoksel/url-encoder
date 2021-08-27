@@ -133,9 +133,9 @@ function addNameSpace (data) {
 function encodeSVG (data) {
   // Use single quotes instead of double to avoid encoding.
   if (externalQuotesValue === `double`) {
-    data = data.replace(/"/g, `'`);
+    data = data.replace(/"/g, `"`);
   } else {
-    data = data.replace(/'/g, `"`);
+    data = data.replace(/'/g, `'`);
   }
 
   data = data.replace(/>\s{1,}</g, `><`);
