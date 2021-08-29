@@ -1,25 +1,25 @@
 <html>
   <head>
-    <title>URL-encoder for SVG</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>SVG için URL oluşturucu</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1>URL-encoder for SVG</h1>
+        <h1>SVG için URL oluşturucu</h1>
 
         <ul class="langs">
           <li class="langs__item">
-            <a>En</a>
+            <a href="../">En</a>
           </li>
           <li class="langs__item">
-            <a href="./ru">Рус</a>
+            <a href="../ru">Рус</a>
           </li>
           <li class="langs__item">
-            <a href="./zh-tw">Tc</a>
+            <a href="../zh-tw">Tc</a>
           </li>
           <li class="langs__item">
-            <a href="./tr">Tr</a>
+            <a>Tr</a>
           </li>
         </ul>
       </header>
@@ -28,7 +28,7 @@
         <div class="panel">
 
           <div class="options">
-              External quotes:
+              Tırnak Kullanımı:
               <label class="options__label">
                 <input
                   type="radio"
@@ -36,7 +36,7 @@
                   name="quotes"
                   class="options__input visuallyhidden"
                 >
-                <span class="options__text">single</span>
+                <span class="options__text">tek</span>
               </label>
 
               <span class="options__middle-word">/</span>
@@ -49,25 +49,25 @@
                   class="options__input visuallyhidden"
                   checked
                 >
-                <span class="options__text">double</span>
+                <span class="options__text">çift</span>
               </label>
           </div>
 
 
           <dl class="about">
-            <dt class="expander">About tool</dt>
+            <dt class="expander">Araç Hakkında</dt>
 
             <dd class="expanded hidden">
-              <p>We can use SVG in CSS via data URI, but without encoding it works only in Webkit based browsers. If encode SVG using <code>encodeURIComponent()</code> it will work everywhere.</p><p>SVG must have attribute <strong>xmlns</strong> like this: <code>xmlns='http: //www.w3.org/2000/svg'</code>. If it doesn't exist, it will be added automagically.</p><p>Encoded SVG can be used in <code>background</code>, in <code>border-image</code> or in <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>live demo</a>).</p>
+              <p>SVG kodlarınızı CSS içinde URI formatında kullanmak istediğinizde ve dönüştürülmemişse sadece Webkit tabanlı tarayıcılarda çalışır. SVG kodunuzu <code>encodeURIComponent()</code> fonksiyonu ile kullanırsanız her yerde çalışır.</p><p>SVG kodunuz <strong>xmlns</strong> özelliğine sahip olmalıdır: <code>xmlns='http: //www.w3.org/2000/svg'</code>. Bu kod eksikse sistem otomatik olarak ekleyecektir.</p><p>Dönüştürülmüş SVG kodlarınızı <code>background</code>, <code>border-image</code> veya <code>mask</code> ile kullanabilirsiniz (<a href='https://codepen.io/yoksel/full/WNrLpYW'>örnek proje</a>).</p>
             </dd>
           </dl>
         </div>
 
         <div class="containers">
           <div class="container container--left container container--init">
-              <h4>Insert SVG:</h4>
+              <h4>SVG Kodu:</h4>
 
-              <button class="button-example">Example</button>
+              <button class="button-example">Örnek</button>
 
               <textarea
                 name="init"
@@ -77,12 +77,12 @@
           </div>
 
           <div class="container container--right container container--result">
-            <h4>Take encoded:</h4>
+            <h4>Dönüştürülmüş kod:</h4>
 
             <button
               id="copy-result-button"
               title="Copy encoded results to clipboard"
-              class="copy-button">Copy</button>
+              class="copy-button">Kopyala</button>
 
             <textarea
               name="result"
@@ -90,16 +90,16 @@
               spellcheck="false"
             ></textarea>
 
-            <div class="tip">You may place encoded SVG here to decode it back</div>
+            <div class="tip">Dönüştürülmüş SVG kodunuzu eski haline çevirmek için buraya yapıştırabilirsiniz</div>
           </div>
         </div>
 
         <div class="containers">
           <div class="container container--left container container--result-css">
-            <h4>Ready for CSS:</h4>
+            <h4>CSS için kod:</h4>
 
             <button
-              id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">Copy</button>
+              id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">Kopyala</button>
 
             <textarea
               name="result-css"
@@ -109,31 +109,31 @@
           </div>
 
           <div class="container container--right container container--demo">
-            <h4>Preview:</h4>
+            <h4>Ön izleme:</h4>
 
-            <div class="contrast-buttons">Background:
+            <div class="contrast-buttons">Arka Plan:
               <button
                 type="button"
                 class="contrast-button contrast-button--white"
                 data-color="white"
-                title="white">
-                <span class="visuallyhidden">white</span>
+                title="Beyaz">
+                <span class="visuallyhidden">Beyaz</span>
               </button>
 
               <button
                 type="button"
                 class="contrast-button contrast-button--silver"
                 data-color="silver"
-                title="silver">
-                <span class="visuallyhidden">silver</span>
+                title="Gri">
+                <span class="visuallyhidden">Gri</span>
               </button>
 
               <button
                 type="button"
                 class="contrast-button contrast-button--black"
                 data-color="black"
-                title="black">
-                <span class="visuallyhidden">black</span>
+                title="Siyah">
+                <span class="visuallyhidden">Siyah</span>
               </button>
             </div>
 
@@ -145,12 +145,12 @@
       </main>
 
       <footer class="footer">
-        <a href="https://github.com/yoksel/url-encoder/">Project on GitHub</a>
+        <a href="https://github.com/yoksel/url-encoder/">Bu proje GitHub</a>
         <a href="https://twitter.com/yoksel_en">@yoksel_en</a>
       </footer>
 
     </div>
-    <script src="./assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
     <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49839931 = new Ya.Metrika2({ id:49839931, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49839931" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   </body>
