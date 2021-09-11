@@ -40,8 +40,8 @@
     "gulp": "^4.0.2",
     "gulp-mustache": "^5.0.0",
     "gulp-rename": "2.0.0",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.14.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.39.2",
     "stylelint": "^13.0.0",
     "stylelint-config-standard": "^19.0.0"
   }
