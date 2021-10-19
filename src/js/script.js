@@ -165,17 +165,14 @@ function getQuotes () {
 const copyResultButton = document.getElementById(`copy-result-button`);
 const copyCSSResultButton = document.getElementById(`copy-css-result-button`);
 
-copyResultButton.addEventListener(`click`, function (event) {
-  const textToCopy = document.getElementById(`result`);
-  textToCopy.select();
-  document.execCommand(`copy`);
-});
+copyResultButton.addEventListener(`click`, copyToClip(`result`));
+copyCSSResultButton.addEventListener(`click`, copyToClip(`result-css`));
 
-copyCSSResultButton.addEventListener(`click`, function (event) {
-  const textToCopy = document.getElementById(`result-css`);
+function copyToClip(elementId) {
+  const textToCopy = document.getElementById(elementId);
   textToCopy.select();
   document.execCommand(`copy`);
-});
+}
 
 // Common
 // ----------------------------------------
