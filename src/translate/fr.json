@@ -1,0 +1,29 @@
+{
+  "path": ".",
+  "title": "Encodeur d'URL pour le SVG",
+  "quotes": "Guillemets externes",
+  "single": "simple",
+  "double": "double",
+  "aboutTitle": "À propos de l'outil",
+  "aboutText": "<p>Nous pouvons utiliser le SVG dans le CSS via les données URI, mais sans encodage, cela ne fonctionne que dans les navigateurs basés sur Webkit. Si vous encodez le SVG en utilisant <code>encodeURIComponent()</code>, cela fonctionnera partout.</p><p>Le SVG doit avoir l'attribut <strong>xmlns</strong> comme ceci: <code>xmlns='http: //www.w3.org/2000/svg'</code>. S'il n'en existe pas, il en sera ajouté automatiquement.</p><p>Le SVG codé peut être utilisé dans <code>background</code>, dans <code>border-image</code> ou dans <code>mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>démonstration en live</a>).</p>",
+  "insertSVG": "Insérer SVG",
+  "example": "Exemple",
+  "takeEncoded": "Prendre l'encodage",
+  "copy": "Copier",
+  "readyForCSS": "Prêt pour le CSS",
+  "preview": "Aperçu",
+  "background": "Arrière-plan",
+  "white": "blanc",
+  "silver": "argenté",
+  "black": "noir",
+  "projectOn": "Projet sur",
+  "twitter": "yoksel_en",
+  "langs": [
+    "<a href=\"../\">En</a>",
+    "<a>Fr</a>",
+    "<a href=\"./ru\">Рус</a>",
+    "<a href=\"./zh-tw\">Tc</a>",
+    "<a href=\"./tr\">Tr</a>"
+  ],
+  "decodeTip": "Vous pouvez placer le SVG encodé ici pour le décoder à nouveau."
+}
