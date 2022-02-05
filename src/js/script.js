@@ -18,11 +18,16 @@ let externalQuotesValue = document.querySelector(`.options__input:checked`).valu
 let quotes = getQuotes();
 
 const buttonExample = document.querySelector(`.button-example`);
+const textareaState = {
+  isExmaple: false,
+  value: ``
+};
 
 // Textarea Actions
 // ----------------------------------------
 
 initTextarea.oninput = function () {
+  textareaState.value = this.value;
   getResults();
 };
 
@@ -31,12 +36,16 @@ resultTextarea.oninput = function () {
     .replace(/background-image:\s{0,}url\(/, ``)
     .replace(/["']{0,}data:image\/svg\+xml,/, ``)
     .replace(/["']\);{0,}$/, ``);
-  initTextarea.value = decodeURIComponent(value);
+
+  const decodedValue = decodeURIComponent(value);
+  textareaState.value = decodedValue;
+  initTextarea.value = decodedValue;
   getResults();
 };
 
 function getResults () {
   if (!initTextarea.value) {
+    resultTextarea.value = ``;
     resultCssTextarea.value = ``;
     resultDemo.setAttribute(`style`, ``);
     return;
@@ -79,14 +88,21 @@ quotesInputs.forEach(input => {
 // ----------------------------------------
 
 buttonExample.addEventListener(`click`, () => {
-  initTextarea.value = `<svg>
-  <circle r="50" cx="50" cy="50" fill="tomato"/>
-  <circle r="41" cx="47" cy="50" fill="orange"/>
-  <circle r="33" cx="48" cy="53" fill="gold"/>
-  <circle r="25" cx="49" cy="51" fill="yellowgreen"/>
-  <circle r="17" cx="52" cy="50" fill="lightseagreen"/>
-  <circle r="9" cx="55" cy="48" fill="teal"/>
-</svg>`;
+  if (textareaState.isExmaple) {
+    initTextarea.value = textareaState.value;
+    textareaState.isExmaple = false;
+  } else {
+    initTextarea.value = `<svg>
+    <circle r="50" cx="50" cy="50" fill="tomato"/>
+    <circle r="41" cx="47" cy="50" fill="orange"/>
+    <circle r="33" cx="48" cy="53" fill="gold"/>
+    <circle r="25" cx="49" cy="51" fill="yellowgreen"/>
+    <circle r="17" cx="52" cy="50" fill="lightseagreen"/>
+    <circle r="9" cx="55" cy="48" fill="teal"/>
+  </svg>`;
+    textareaState.isExmaple = true;
+  }
+
   getResults();
 });
 
