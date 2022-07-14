@@ -1,0 +1,29 @@
+{
+  "path": "..",
+  "title": "SVG专用URL编码器",
+  "quotes": "引号 ",
+  "single": "单引号",
+  "double": "双引号",
+  "aboutTitle": "关于本工具",
+  "aboutText": "<p>我们可以通过数据URI在CSS中使用SVG。但是，只有基于Webkit的浏览器才支持未经编码的SVG，而经过<code>encodeURIComponent()</code>编码的SVG则可以在任何地方使用。</p><p>SVG必须包含<strong>xmlns</strong>属性，如：<code>xmlns='http: //www.w3.org/2000/svg'</code>。如果不包含，则本工具会自动添加。</p><p>经过编码的SVG可以在<code>background</code>、<code>border-image</code>或<code>mask</code>中使用（<a href='https://codepen.io/yoksel/full/WNrLpYW'>实例演示</a>）。</p>",
+  "insertSVG": "添加SVG ",
+  "example": "例子",
+  "takeEncoded": "编码结果 ",
+  "copy": "复制",
+  "readyForCSS": "在CSS中使用 ",
+  "preview": "预览 ",
+  "background": "背景 ",
+  "white": "白色",
+  "silver": "银色",
+  "black": "黑色",
+  "projectOn": "项目仓库 ",
+  "twitter": "yoksel_en",
+  "langs": [
+    "<a href=\"../\">En</a>",
+    "<a href=\"../ru\">Рус</a>",
+    "<a>Sc</a>",
+    "<a href=\"../tc\">Tc</a>",
+    "<a href=\"../tr\">Tr</a>"
+  ],
+  "decodeTip": "您可以在此填入编码后的SVG以将其解码"
+}
