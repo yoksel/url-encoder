@@ -6,6 +6,7 @@ const resultCssTextarea = doc.querySelector(`#result-css`);
 const resultDemo = doc.querySelector(`#demo`);
 const demoWrapper = doc.querySelector(`.demo-wrapper`);
 const contrastButtons = doc.querySelectorAll(`.contrast-button`);
+const dropzoneEl = doc.querySelector(`#dropzone`);
 let contrastButtonCurrent = null;
 let backgroundColor = ``;
 
@@ -13,11 +14,11 @@ const expanders = doc.querySelectorAll(`.expander`);
 const expandedClass = `expanded`;
 const symbols = /[\r\n%#()<>?[\\\]^`{|}]/g;
 
-const quotesInputs = document.querySelectorAll(`.options__input`);
-let externalQuotesValue = document.querySelector(`.options__input:checked`).value;
+const quotesInputs = doc.querySelectorAll(`.options__input`);
+let externalQuotesValue = doc.querySelector(`.options__input:checked`).value;
 let quotes = getQuotes();
 
-const buttonExample = document.querySelector(`.button-example`);
+const buttonExample = doc.querySelector(`.button-example`);
 
 // Textarea Actions
 // ----------------------------------------
@@ -162,19 +163,19 @@ function getQuotes () {
 // Copy to clipboard
 // ----------------------------------------
 
-const copyResultButton = document.getElementById(`copy-result-button`);
-const copyCSSResultButton = document.getElementById(`copy-css-result-button`);
+const copyResultButton = doc.getElementById(`copy-result-button`);
+const copyCSSResultButton = doc.getElementById(`copy-css-result-button`);
 
 copyResultButton.addEventListener(`click`, function (event) {
-  const textToCopy = document.getElementById(`result`);
+  const textToCopy = doc.getElementById(`result`);
   textToCopy.select();
-  document.execCommand(`copy`);
+  doc.execCommand(`copy`);
 });
 
 copyCSSResultButton.addEventListener(`click`, function (event) {
-  const textToCopy = document.getElementById(`result-css`);
+  const textToCopy = doc.getElementById(`result-css`);
   textToCopy.select();
-  document.execCommand(`copy`);
+  doc.execCommand(`copy`);
 });
 
 // Common
@@ -183,4 +184,32 @@ copyCSSResultButton.addEventListener(`click`, function (event) {
 // eslint-disable-next-line no-unused-vars
 function out (data) {
   console.log(data);
+}
+
+// Dropzone logic
+// ----------------------------------------
+
+if (dropzoneEl) {
+  doc.addEventListener(`dragover`, (e) => {
+    e.preventDefault();
+    dropzoneEl.classList.add(`active`);
+  });
+  dropzoneEl.addEventListener(`dragleave`, () => {
+    dropzoneEl.classList.remove(`active`);
+  });
+  dropzoneEl.addEventListener(`drop`, (e) => {
+    e.preventDefault();
+    const data = e.dataTransfer;
+    const reader = new FileReader();
+    const file = data.files[0];
+
+    if (file.type == `image/svg+xml`) {
+      reader.readAsText(file);
+      reader.onload = () => {
+        initTextarea.value = reader.result;
+        getResults();
+      };
+    }
+    dropzoneEl.classList.remove(`active`);
+  });
 }
