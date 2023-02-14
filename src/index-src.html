@@ -11,7 +11,12 @@
         <ul class="langs">
           {{#langs}}
           <li class="langs__item">
-            {{{.}}}
+            {{#isActive}}
+              <span>{{ name }}</span>
+            {{/isActive}}
+            {{^isActive}}
+              <a href="{{ path }}/{{ code }}">{{ name }}</a>
+            {{/isActive}}
           </li>
           {{/langs}}
         </ul>

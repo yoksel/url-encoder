@@ -1,5 +1,6 @@
 {
   "path": "..",
+  "langName": "Рус",
   "title": "URL-encoder для SVG",
   "quotes": "Внешние кавычки",
   "single": "oдинарные",
@@ -18,11 +19,5 @@
   "black": "черный",
   "projectOn": "Проект на",
   "twitter": "yoksel",
-  "langs": [
-    "<a href=\"../\">En</a>",
-    "<a>Рус</a>",
-    "<a href=\"../zh-tw\">Tc</a>",
-    "<a href=\"../tr\">Tr</a>"
-  ],
   "decodeTip": "Сюда можно вставить закодированный SVG, чтобы раскодировать его обратно"
 }

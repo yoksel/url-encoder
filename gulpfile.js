@@ -7,33 +7,44 @@ const colors = require(`colors/safe`);
 const del = require(`del`);
 const mustache = require(`gulp-mustache`);
 const rename = require(`gulp-rename`);
+const fs = require(`fs`);
+const path = require(`path`);
 
 const SERVER_ROOT = `build/`;
+const TRANSLATES_PATH = `./src/translate/`;
 
-const translates = [
-  {
-    dest: SERVER_ROOT,
-    url: `./src/translate/en.json`
-  },
-  {
-    dest: `${SERVER_ROOT}ru`,
-    url: `./src/translate/ru.json`
-  },
-  {
-    dest: `${SERVER_ROOT}zh-tw`,
-    url: `./src/translate/zh-tw.json`
-  },
-  {
-    dest: `${SERVER_ROOT}tr`,
-    url: `./src/translate/tr.json`
-  }
-];
+// GENERATE TRANSLATES
+const translates = [];
+const translateFiles = fs.readdirSync(TRANSLATES_PATH);
+const languages = [];
+
+translateFiles.forEach(translateFile => {
+  const fileUrl = TRANSLATES_PATH + translateFile;
+  const lang = path.basename(fileUrl, `.json`);
+  const content = JSON.parse(fs.readFileSync(fileUrl, `utf8`));
+
+  languages.push({
+    name: content.langName,
+    code: lang == `en` ? null : lang,
+  });
+
+  translates.push({
+    content: content,
+    dest: lang == `en` ? SERVER_ROOT : SERVER_ROOT + lang,
+    path: lang == `en` ? `.` : `..`
+  })
+});
 
 // TEMPLATES
-const tmplTasks = translates.map(({ dest, url }) => {
+const tmplTasks = translates.map(({ dest, content }) => {
   return (done) => {
+    // ATTACH RESPECTIVE LANG NAV
+    const langs = languages.map(lang => ({
+      ...lang,
+      isActive: lang.name == content.langName
+    }));
     gulp.src(`./src/index-src.html`)
-      .pipe(mustache(url))
+      .pipe(mustache({...content, langs}))
       .pipe(rename(`index.html`))
       .pipe(gulp.dest(dest))
       .pipe(reload({ stream: true }));
