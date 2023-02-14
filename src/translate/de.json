@@ -1,0 +1,23 @@
+{
+  "path": "..",
+  "langName": "De",
+  "title": "URL-Kodierer für SVG",
+  "quotes": "Anführungszeichen",
+  "single": "einfach",
+  "double": "doppelt",
+  "aboutTitle": "Über das Tool",
+  "aboutText": "<p>Wir können ein SVG in CSS über Daten-URI verwenden, aber ohne kodierung funktioniert es nur in Webkit-basierten Browsern. Wenn das SVG mit <code>encodeURIComponent()</code> kodiert wird, funktioniert es überall.</p><p>Das SVG muss das Attribut <strong>xmlns</strong> wie folgt besitzen: <code>xmlns='http: //www.w3.org/2000/svg'</code>. Falls es nicht vorhanden ist, wird es automatisch hinzugefügt.</p><p>Das kodierte SVG kann anschließend als <code>background</code>, als <code>border-image</code> oder auch als <code>mask</code> verwendet werden. (<a href='https://codepen.io/yoksel/full/WNrLpYW'>Live-Demo</a>).</p>",
+  "insertSVG": "SVG einfügen",
+  "example": "Beispiel",
+  "takeEncoded": "Kodiert verwenden",
+  "copy": "Kopieren",
+  "readyForCSS": "Vorbereitet für CSS",
+  "preview": "Vorschau",
+  "background": "Hintergrund",
+  "white": "weiß",
+  "silver": "grau",
+  "black": "schwarz",
+  "projectOn": "Projekt auf",
+  "twitter": "yoksel_en",
+  "decodeTip": "Du kannst ein kodiertes SVG hier einfügen, um es wieder zu dekodieren"
+}
