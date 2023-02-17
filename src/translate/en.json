@@ -20,10 +20,10 @@
   "twitter": "yoksel_en",
   "langs": [
     "<a>En</a>",
-    "<a href=\"../pt\">Br</a>",
-    "<a href=\"../ru\">Рус</a>",
-    "<a href=\"../zh-tw\">Tc</a>",
-    "<a href=\"../tr\">Tr</a>"
+    "<a href=\"./pt\">Br</a>",
+    "<a href=\"./ru\">Рус</a>",
+    "<a href=\"./zh-tw\">Tc</a>",
+    "<a href=\"./tr\">Tr</a>"
   ],
   "decodeTip": "You may place encoded SVG here to decode it back"
 }
