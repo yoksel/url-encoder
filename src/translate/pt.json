@@ -1,0 +1,23 @@
+{
+  "path": "..",
+  "langName": "Br",
+  "title": "Codificador de URL para SVG",
+  "quotes": "Aspas externas",
+  "single": "simples",
+  "double": "duplas",
+  "aboutTitle": "Sobre",
+  "aboutText": "<p>Podemos usar SVG em CSS via dados URI, mas sem codificação, funciona apenas em navegadores baseados em Webkit. Se codificar SVG usando <code>encodeURIComponent()</code>, ele funcionará em qualquer lugar.</p><p>O SVG deve ter o atributo <strong>xmlns</strong> desta maneira: <code>xmlns='http: / /www.w3.org/2000/svg'</code>. Se não existir, ele será adicionado automagicamente.</p><p>SVGs codificados podem ser usado em <code>background</code>, em <code>border-image</code> ou em <code >mask</code> (<a href='https://codepen.io/yoksel/full/WNrLpYW'>Demonstração</a>).</p>",
+  "insertSVG": "Código SVG",
+  "example": "Exemplo",
+  "takeEncoded": "Trecho codificado",
+  "copy": "Copiar",
+  "readyForCSS": "Código CSS",
+  "preview": "Preview",
+  "background": "Cor de fundo",
+  "white": "Branco",
+  "silver": "Prata",
+  "black": "Preto",
+  "projectOn": "Repositório no",
+  "twitter": "yoksel_en",
+  "decodeTip": "Você pode colocar um SVG codificado aqui para decodificar de volta."
+}
