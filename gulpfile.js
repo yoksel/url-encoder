@@ -1,6 +1,5 @@
 const gulp = require(`gulp`);
-const sass = require(`gulp-sass`);
-sass.compiler = require(`node-sass`);
+const sass = require('gulp-sass')(require('sass'));
 const sync = require(`browser-sync`).create();
 const reload = sync.reload;
 const colors = require(`colors/safe`);
