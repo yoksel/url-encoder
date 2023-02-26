@@ -26,6 +26,10 @@ const translates = [
   {
     dest: `${SERVER_ROOT}tr`,
     url: `./src/translate/tr.json`
+  },
+  {
+    dest: `${SERVER_ROOT}zh-cn`,
+    url: `./src/translate/zh-cn.json`
   }
 ];
 
