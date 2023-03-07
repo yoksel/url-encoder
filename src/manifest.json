@@ -1,0 +1,13 @@
+{
+  "dir": "auto",
+  "display": "browser",
+  "name": "URL-encoder for SVG",
+  "short_name": "URL-encoder for SVG",
+  "scope": "/url-encoder/",
+  "lang": "ru",
+  "description": "URL-encoder for SVG",
+  "theme_color": "none",
+  "background_color": "none",
+  "дисплей": "browser",
+  "цвет_темы": "none"
+}

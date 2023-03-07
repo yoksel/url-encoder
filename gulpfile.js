@@ -35,9 +35,12 @@ const translates = [
 // TEMPLATES
 const tmplTasks = translates.map(({ dest, url }) => {
   return (done) => {
-    gulp.src(`./src/index-src.html`)
+    gulp.src([
+      './src/index.html',
+      './src/manifest.json',
+      './src/pwabuilder-sw.js'
+    ])
       .pipe(mustache(url))
-      .pipe(rename(`index.html`))
       .pipe(gulp.dest(dest))
       .pipe(reload({ stream: true }));
     done();
