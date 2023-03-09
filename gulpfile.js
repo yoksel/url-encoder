@@ -22,17 +22,33 @@ translateFiles.forEach(translateFile => {
   const lang = path.basename(fileUrl, `.json`);
   const content = JSON.parse(fs.readFileSync(fileUrl, `utf8`));
 
-  languages.push({
-    name: content.langName,
-    code: lang == `en` ? null : lang,
-  });
-
-  translates.push({
-    content: content,
-    dest: lang == `en` ? SERVER_ROOT : SERVER_ROOT + lang,
-    path: lang == `en` ? `.` : `..`
-  })
+  if (lang == `en`) {
+    // EN needs a different path and also has to be in first place of array
+    languages.unshift({
+      name: content.langName,
+      code: null,
+    });
+  
+    translates.unshift({
+      content: content,
+      dest: SERVER_ROOT,
+      path: `.`
+    })
+  } else {
+    languages.push({
+      name: content.langName,
+      code: lang,
+    });
+  
+    translates.push({
+      content: content,
+      dest: SERVER_ROOT + lang,
+      path: `..`
+    })
+  }
 });
+
+console.log(translates, languages);
 
 // TEMPLATES
 const tmplTasks = translates.map(({ dest, content }) => {
