@@ -190,12 +190,13 @@ function out (data) {
 // ----------------------------------------
 
 if (dropzoneEl) {
+  const activeCls = `dropzone--active`;
   doc.addEventListener(`dragover`, (e) => {
     e.preventDefault();
-    dropzoneEl.classList.add(`active`);
+    dropzoneEl.classList.add(activeCls);
   });
   dropzoneEl.addEventListener(`dragleave`, () => {
-    dropzoneEl.classList.remove(`active`);
+    dropzoneEl.classList.remove(activeCls);
   });
   dropzoneEl.addEventListener(`drop`, (e) => {
     e.preventDefault();
@@ -210,6 +211,6 @@ if (dropzoneEl) {
         getResults();
       };
     }
-    dropzoneEl.classList.remove(`active`);
+    dropzoneEl.classList.remove(activeCls);
   });
 }

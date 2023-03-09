@@ -282,7 +282,7 @@ DD {
   color: #777;
 }
 
-#dropzone {
+.dropzone {
   $svgIconSize: 80;
   background-color: rgba(#4d4d52, 0.6);
   backdrop-filter: blur(0.75rem);
@@ -301,7 +301,7 @@ DD {
   pointer-events: none;
   opacity: 0;
 
-  &.active {
+  &--active {
     transform: scale(1);
     pointer-events: all;
     opacity: 1;
