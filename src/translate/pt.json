@@ -1,5 +1,6 @@
 {
   "path": "..",
+  "langName": "Br",
   "title": "Codificador de URL para SVG",
   "quotes": "Aspas externas",
   "single": "simples",
@@ -18,12 +19,5 @@
   "black": "Preto",
   "projectOn": "Repositório no",
   "twitter": "yoksel_en",
-  "langs": [
-    "<a href=\"../\">En</a>",
-    "<a>Br</a>",
-    "<a href=\"../ru\">Рус</a>",
-    "<a href=\"../zh-tw\">Tc</a>",
-    "<a href=\"../tr\">Tr</a>"
-  ],
   "decodeTip": "Você pode colocar um SVG codificado aqui para decodificar de volta."
 }
