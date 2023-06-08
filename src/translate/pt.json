@@ -22,7 +22,8 @@
     "<a href=\"../\">En</a>",
     "<a>Br</a>",
     "<a href=\"../ru\">Рус</a>",
-    "<a href=\"../zh-tw\">Tc</a>",
+    "<a href=\"../zh-cn\">简中</a>",
+    "<a href=\"../zh-tw\">繁中</a>",
     "<a href=\"../tr\">Tr</a>"
   ],
   "decodeTip": "Você pode colocar um SVG codificado aqui para decodificar de volta."

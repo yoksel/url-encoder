@@ -22,7 +22,8 @@
     "<a href=\"../\">En</a>",
     "<a href=\"../pt\">Br</a>",
     "<a href=\"../ru\">Рус</a>",
-    "<a>Tc</a>",
+    "<a href=\"../zh-cn\">简中</a>",
+    "<a>繁中</a>",
     "<a href=\"../tr\">Tr</a>"
   ],
   "decodeTip": "您可以將編碼後的 SVG 放在此處以將其解碼回去"
