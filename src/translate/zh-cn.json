@@ -1,0 +1,30 @@
+{
+  "path": "..",
+  "title": "用于 SVG 的 URL-encoder",
+  "quotes": "引号 ",
+  "single": "单引号",
+  "double": "双引号",
+  "aboutTitle": "关于此工具",
+  "aboutText": "<p>不进行编码的话，我们可以以 <code>data URI</code> 形式在 CSS 中直接使用 SVG，但这仅在基于 Webkit 的浏览器中有效；如果用 <code>encodeURIComponent()</code> 对 SVG 编码，就可在全部地方都生效。</p><p>SVG 必须有 <strong>xmlns</strong> 属性，例如：<code>xmlns='http: //www.w3.org/2000/svg'</code>。如果不存在则会自动添加。</p><p>编码后的 SVG 可在 <code>background</code>，<code>border-image</code> 或 <code>mask</code>中使用（<a href='https://codepen.io/yoksel/full/WNrLpYW'>实例演示</a>）。</p>",
+  "insertSVG": "插入 SVG ",
+  "example": "示例",
+  "takeEncoded": "编码后 ",
+  "copy": "复制",
+  "readyForCSS": "在 CSS 里使用 ",
+  "preview": "预览 ",
+  "background": "背景 ",
+  "white": "白色",
+  "silver": "银色",
+  "black": "黑色",
+  "projectOn": "查看项目于 ",
+  "twitter": "yoksel_en",
+  "langs": [
+    "<a href=\"../\">En</a>",
+    "<a href=\"../pt\">Br</a>",
+    "<a href=\"../ru\">Рус</a>",
+    "<a>简中</a>",
+    "<a href=\"../zh-tw\">繁中</a>",
+    "<a href=\"../tr\">Tr</a>"
+  ],
+  "decodeTip": "您可将编码后的 SVG 粘贴到此处以解码"
+}
