@@ -19,12 +19,12 @@
   "projectOn": "查看项目于 ",
   "twitter": "yoksel_en",
   "langs": [
-    "<a href=\"../\">En</a>",
-    "<a href=\"../pt\">Br</a>",
-    "<a href=\"../ru\">Рус</a>",
+    "<a href=\"./\">En</a>",
+    "<a href=\"./pt\">Br</a>",
+    "<a href=\"./ru\">Рус</a>",
     "<a>简中</a>",
-    "<a href=\"../zh-tw\">繁中</a>",
-    "<a href=\"../tr\">Tr</a>"
+    "<a href=\"./zh-tw\">繁中</a>",
+    "<a href=\"./tr\">Tr</a>"
   ],
   "decodeTip": "您可将编码后的 SVG 粘贴到此处以解码"
 }
