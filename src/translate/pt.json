@@ -19,12 +19,12 @@
   "projectOn": "Repositório no",
   "twitter": "yoksel_en",
   "langs": [
-    "<a href=\"../\">En</a>",
+    "<a href=\"./\">En</a>",
     "<a>Br</a>",
-    "<a href=\"../ru\">Рус</a>",
-    "<a href=\"../zh-cn\">简中</a>",
-    "<a href=\"../zh-tw\">繁中</a>",
-    "<a href=\"../tr\">Tr</a>"
+    "<a href=\"./ru\">Рус</a>",
+    "<a href=\"./zh-cn\">简中</a>",
+    "<a href=\"./zh-tw\">繁中</a>",
+    "<a href=\"./tr\">Tr</a>"
   ],
   "decodeTip": "Você pode colocar um SVG codificado aqui para decodificar de volta."
 }
