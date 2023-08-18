@@ -6,49 +6,12 @@ const colors = require(`colors/safe`);
 const del = require(`del`);
 const mustache = require(`gulp-mustache`);
 const rename = require(`gulp-rename`);
-const fs = require(`fs`);
-const path = require(`path`);
+const getL10n = require(`./src/helpers/getLocalizations.js`).default;
 
 const SERVER_ROOT = `build/`;
 const TRANSLATES_PATH = `./src/translate/`;
 
-// GENERATE TRANSLATES
-const translates = [];
-const translateFiles = fs.readdirSync(TRANSLATES_PATH);
-const languages = [];
-
-translateFiles.forEach(translateFile => {
-  const fileUrl = TRANSLATES_PATH + translateFile;
-  const lang = path.basename(fileUrl, `.json`);
-  const content = JSON.parse(fs.readFileSync(fileUrl, `utf8`));
-
-  if (lang == `en`) {
-    // EN needs a different path and also has to be in first place of array
-    languages.unshift({
-      name: content.langName,
-      code: null,
-    });
-  
-    translates.unshift({
-      content: content,
-      dest: SERVER_ROOT,
-      path: `.`
-    })
-  } else {
-    languages.push({
-      name: content.langName,
-      code: lang,
-    });
-  
-    translates.push({
-      content: content,
-      dest: SERVER_ROOT + lang,
-      path: `..`
-    })
-  }
-});
-
-console.log(translates, languages);
+const {languages, translates} = getL10n(SERVER_ROOT, TRANSLATES_PATH);
 
 // TEMPLATES
 const tmplTasks = translates.map(({ dest, content }) => {
@@ -56,7 +19,7 @@ const tmplTasks = translates.map(({ dest, content }) => {
     // ATTACH RESPECTIVE LANG NAV
     const langs = languages.map(lang => ({
       ...lang,
-      isActive: lang.name == content.langName
+      isActive: lang.name === content.langName
     }));
     gulp.src(`./src/index-src.html`)
       .pipe(mustache({...content, langs}))
