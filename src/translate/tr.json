@@ -1,5 +1,6 @@
 {
   "path": "..",
+  "langName": "Tr",
   "title": "SVG için URL oluşturucu",
   "quotes": "Tırnak Kullanımı",
   "single": "tek",
@@ -18,13 +19,5 @@
   "black": "Siyah",
   "projectOn": "Bu proje",
   "twitter": "yoksel_en",
-  "langs": [
-    "<a href=\"../\">En</a>",
-    "<a href=\"../pt\">Br</a>",
-    "<a href=\"../ru\">Рус</a>",
-    "<a href=\"../zh-cn\">简中</a>",
-    "<a href=\"../zh-tw\">繁中</a>",
-    "<a>Tr</a>"
-  ],
   "decodeTip": "Dönüştürülmüş SVG kodunuzu eski haline çevirmek için buraya yapıştırabilirsiniz"
 }

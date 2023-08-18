@@ -6,41 +6,23 @@ const colors = require(`colors/safe`);
 const del = require(`del`);
 const mustache = require(`gulp-mustache`);
 const rename = require(`gulp-rename`);
+const getL10n = require(`./src/helpers/getLocalizations.js`).default;
 
 const SERVER_ROOT = `build/`;
+const TRANSLATES_PATH = `./src/translate/`;
 
-const translates = [
-  {
-    dest: SERVER_ROOT,
-    url: `./src/translate/en.json`
-  },
-  {
-    dest: `${SERVER_ROOT}pt`,
-    url: `./src/translate/pt.json`
-  },
-  {
-    dest: `${SERVER_ROOT}ru`,
-    url: `./src/translate/ru.json`
-  },
-  {
-    dest: `${SERVER_ROOT}zh-cn`,
-    url: `./src/translate/zh-cn.json`
-  },
-  {
-    dest: `${SERVER_ROOT}zh-tw`,
-    url: `./src/translate/zh-tw.json`
-  },
-  {
-    dest: `${SERVER_ROOT}tr`,
-    url: `./src/translate/tr.json`
-  }
-];
+const {languages, translates} = getL10n(SERVER_ROOT, TRANSLATES_PATH);
 
 // TEMPLATES
-const tmplTasks = translates.map(({ dest, url }) => {
+const tmplTasks = translates.map(({ dest, content }) => {
   return (done) => {
+    // ATTACH RESPECTIVE LANG NAV
+    const langs = languages.map(lang => ({
+      ...lang,
+      isActive: lang.name === content.langName
+    }));
     gulp.src(`./src/index-src.html`)
-      .pipe(mustache(url))
+      .pipe(mustache({...content, langs}))
       .pipe(rename(`index.html`))
       .pipe(gulp.dest(dest))
       .pipe(reload({ stream: true }));
