@@ -3,6 +3,10 @@
   "version": "1.0.1",
   "description": "http://yoksel.github.io/url-encoder",
   "main": ".eslintrc.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
   "scripts": {
     "start": "gulp clean && gulp serve",
     "build": "gulp clean && gulp build",

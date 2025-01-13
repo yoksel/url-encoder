@@ -11,12 +11,14 @@ http://yoksel.github.io/url-encoder
 
 Demo: https://codepen.io/yoksel/full/WNrLpYW.
 
-## How to add translate
+## How to run the project
+
+1. Run `npm i` to install all dependecies for development
+2. Run `npm start` to start the process (will atomatically open up a new browser tab)
+
+
+## How to add a translation
 
 1. Create translation file (use `src/translate/en.json` as example) and place it to `src/translate/`
-2. Add new language to section `langs` in all translation files
-3. Add item with your language to section `translates` in `gulpfile.js`.
-4. Run `npm start` in console (wait until project will be opened in browser) and check all pages:
-    * Link to new page must appear in all pages
-    * In the page with new translate new language in list must looks like current (bold and black)
-5. Send pull request
+2. Run the project locally and check the newly language page for any translation mistakes
+3. Send pull request
