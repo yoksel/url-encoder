@@ -180,6 +180,27 @@ DD {
   cursor: default;
 }
 
+.css-options {
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.css-options__label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: steelblue;
+}
+
+.css-options__input {
+  margin-right: 5px;
+}
+
+.css-options__text {
+  line-height: 1;
+}
+
 .expander {
   position: relative;
   z-index: 2;

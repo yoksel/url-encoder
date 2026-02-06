@@ -18,6 +18,8 @@ const quotesInputs = doc.querySelectorAll(`.options__input`);
 let externalQuotesValue = doc.querySelector(`.options__input:checked`).value;
 let quotes = getQuotes();
 
+const conformDimensionsInput = doc.querySelector(`#conform-dimensions`);
+
 const buttonExample = doc.querySelector(`.button-example`);
 
 // Textarea Actions
@@ -36,6 +38,16 @@ resultTextarea.oninput = function () {
   getResults();
 };
 
+function getSVGDimensions (svgString) {
+  const widthMatch = svgString.match(/<svg[^>]*\swidth=["']([^"']+)["']/);
+  const heightMatch = svgString.match(/<svg[^>]*\sheight=["']([^"']+)["']/);
+
+  return {
+    width: widthMatch ? widthMatch[1] : null,
+    height: heightMatch ? heightMatch[1] : null
+  };
+}
+
 function getResults () {
   if (!initTextarea.value) {
     resultCssTextarea.value = ``;
@@ -46,7 +58,24 @@ function getResults () {
   const namespaced = addNameSpace(initTextarea.value);
   const escaped = encodeSVG(namespaced);
   resultTextarea.value = escaped;
-  const resultCss = `background-image: url(${quotes.level1}data:image/svg+xml,${escaped}${quotes.level1});`;
+
+  const cssRules = [];
+  cssRules.push(`background-image: url(${quotes.level1}data:image/svg+xml,${escaped}${quotes.level1});`);
+  cssRules.push(`background-repeat: no-repeat;`);
+  cssRules.push(`background-size: 100%;`);
+  cssRules.push(`background-position: center;`);
+
+  if (conformDimensionsInput && conformDimensionsInput.checked) {
+    const dims = getSVGDimensions(initTextarea.value);
+    if (dims.width) {
+      cssRules.push(`width: ${dims.width}px;`);
+    }
+    if (dims.height) {
+      cssRules.push(`height: ${dims.height}px;`);
+    }
+  }
+
+  const resultCss = cssRules.join(`\n`);
   resultCssTextarea.value = resultCss;
   resultDemo.setAttribute(`style`, resultCss);
 }
@@ -75,6 +104,15 @@ quotesInputs.forEach(input => {
     getResults();
   });
 });
+
+// Conform dimensions toggle
+// ----------------------------------------
+
+if (conformDimensionsInput) {
+  conformDimensionsInput.addEventListener(`change`, function () {
+    getResults();
+  });
+}
 
 // Set example
 // ----------------------------------------

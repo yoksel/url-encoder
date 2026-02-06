@@ -26,5 +26,6 @@
     "<a>繁中</a>",
     "<a href=\"../tr\">Tr</a>"
   ],
-  "decodeTip": "您可以將編碼後的 SVG 放在此處以將其解碼回去"
+  "decodeTip": "您可以將編碼後的 SVG 放在此處以將其解碼回去",
+  "conformDimensions": "適配尺寸"
 }

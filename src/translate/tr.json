@@ -26,5 +26,6 @@
     "<a href=\"../zh-tw\">繁中</a>",
     "<a>Tr</a>"
   ],
-  "decodeTip": "Dönüştürülmüş SVG kodunuzu eski haline çevirmek için buraya yapıştırabilirsiniz"
+  "decodeTip": "Dönüştürülmüş SVG kodunuzu eski haline çevirmek için buraya yapıştırabilirsiniz",
+  "conformDimensions": "Boyutları uygula"
 }

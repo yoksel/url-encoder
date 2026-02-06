@@ -26,5 +26,6 @@
     "<a href=\"../zh-tw\">繁中</a>",
     "<a href=\"../tr\">Tr</a>"
   ],
-  "decodeTip": "Você pode colocar um SVG codificado aqui para decodificar de volta."
+  "decodeTip": "Você pode colocar um SVG codificado aqui para decodificar de volta.",
+  "conformDimensions": "Conformar dimensões"
 }
