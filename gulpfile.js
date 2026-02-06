@@ -13,26 +13,6 @@ const translates = [
   {
     dest: SERVER_ROOT,
     url: `./src/translate/en.json`
-  },
-  {
-    dest: `${SERVER_ROOT}pt`,
-    url: `./src/translate/pt.json`
-  },
-  {
-    dest: `${SERVER_ROOT}ru`,
-    url: `./src/translate/ru.json`
-  },
-  {
-    dest: `${SERVER_ROOT}zh-cn`,
-    url: `./src/translate/zh-cn.json`
-  },
-  {
-    dest: `${SERVER_ROOT}zh-tw`,
-    url: `./src/translate/zh-tw.json`
-  },
-  {
-    dest: `${SERVER_ROOT}tr`,
-    url: `./src/translate/tr.json`
   }
 ];
 

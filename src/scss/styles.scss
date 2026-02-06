@@ -121,25 +121,6 @@ DD {
   clear: both;
 }
 
-.langs {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: auto;
-  display: flex;
-  list-style-type: none;
-
-  A:not([href]) {
-    font-weight: bold;
-    color: inherit;
-  }
-}
-
-.langs__item {
-  & + & {
-    margin-left: .5rem;
-  }
-}
 
 .footer {
   position: relative;
